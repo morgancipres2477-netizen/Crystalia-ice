@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Réalisations — Crystalia Ice</title>
+  <meta name="description" content="Découvrez les réalisations Crystalia Ice — patinoires éphémères, spectacles de patinage artistique, animations sur mesure." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .gallery-section { padding: 52px 40px; background: rgba(7,9,22,0.99); }
+    .gallery-header { text-align: center; margin-bottom: 28px; }
+    .gallery-header h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(26px,4vw,34px); font-style: italic; color: #fff; }
+    .gallery-header h2 em { color: var(--gold); }
+
+    .filters { display: flex; justify-content: center; gap: 10px; margin-bottom: 36px; flex-wrap: wrap; }
+    .filter-btn { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.55); border: 0.5px solid rgba(255,255,255,0.2); padding: 9px 20px; cursor: pointer; font-family: 'Montserrat', sans-serif; background: transparent; transition: all 0.2s; }
+    .filter-btn.active, .filter-btn:hover { color: var(--gold); border-color: rgba(201,168,76,0.55); background: rgba(201,168,76,0.08); }
+
+    .gallery-grid { columns: 3; gap: 8px; }
+    .gallery-item { break-inside: avoid; margin-bottom: 8px; position: relative; overflow: hidden; cursor: pointer; }
+    .gallery-item img { width: 100%; display: block; transition: transform 0.4s ease; }
+    .gallery-item:hover img { transform: scale(1.04); }
+    .gallery-item .item-overlay { position: absolute; inset: 0; background: rgba(7,9,26,0); transition: background 0.3s; display: flex; align-items: flex-end; padding: 14px; }
+    .gallery-item:hover .item-overlay { background: rgba(7,9,26,0.55); }
+    .gallery-item .item-label { font-family: 'Cormorant Garamond', serif; font-size: 14px; font-style: italic; color: #fff; opacity: 0; transform: translateY(6px); transition: all 0.3s; }
+    .gallery-item:hover .item-label { opacity: 1; transform: translateY(0); }
+
+    .spectacle-section { background: rgba(6,8,18,0.99); padding: 52px 40px; border-top: 0.5px solid rgba(201,168,76,0.1); }
+    .spectacle-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; }
+    .spectacle-item { position: relative; overflow: hidden; aspect-ratio: 3/4; }
+    .spectacle-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+    .spectacle-item:hover img { transform: scale(1.05); }
+    .spectacle-item .ov-label { position: absolute; bottom: 0; left: 0; right: 0; padding: 20px 14px 12px; background: linear-gradient(to top, rgba(7,9,26,0.85), transparent); font-family: 'Cormorant Garamond', serif; font-size: 14px; font-style: italic; color: rgba(255,255,255,0.75); }
+
+    @media (max-width: 768px) {
+      .gallery-grid { columns: 2; }
+      .spectacle-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) {
+      .gallery-grid { columns: 1; }
+      .spectacle-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="main-nav">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-main">Crystalia</span>
+      <span class="nav-logo-sub">Ice Events</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="concept.html">Concept</a></li>
+      <li><a href="formules.html">Formules</a></li>
+      <li><a href="realisations.html" class="active">Réalisations</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-lang">
+      <span class="active">FR</span><span>EN</span><span>ES</span>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <img src="images/hero-bg.jpg" alt="Patinoire féerique" />
+    <div class="page-hero-ov"></div>
+    <div class="page-hero-content">
+      <div class="page-tag">✦ Réalisations ✦</div>
+      <h1>Chaque événement,<br><em>une histoire unique</em></h1>
+      <p>Patinoires · Spectacles · Animations · Sur mesure</p>
+    </div>
+  </div>
+
+  <div class="gallery-section">
+    <div class="gallery-header">
+      <span class="sec-tag">Nos installations</span>
+      <h2>Patinoires <em>éphémères</em></h2>
+    </div>
+    <div class="filters">
+      <button class="filter-btn active">Tout voir</button>
+      <button class="filter-btn">Place de ville</button>
+      <button class="filter-btn">Hôtel & Resort</button>
+      <button class="filter-btn">Centre commercial</button>
+      <button class="filter-btn">Spectacle</button>
+    </div>
+    <div class="gallery-grid" id="gallery">
+      <!-- Les images seront ajoutées ici -->
+      <!-- Exemple : <div class="gallery-item"><img src="images/real-01.jpg" alt="..." /><div class="item-overlay"><span class="item-label">Place de ville · Noël</span></div></div> -->
+      <div class="gallery-item"><img src="images/hero-bg.jpg" alt="Patinoire féerique" /><div class="item-overlay"><span class="item-label">Place de ville · Ambiance Noël</span></div></div>
+      <div class="gallery-item"><img src="images/cibles-bg.jpg" alt="Patinoire lumières" /><div class="item-overlay"><span class="item-label">Vue aérienne · Sapin central</span></div></div>
+      <div class="gallery-item"><img src="images/cta-bg.jpg" alt="Lumières de Noël" /><div class="item-overlay"><span class="item-label">Éclairage premium · Noël</span></div></div>
+      <div class="gallery-item"><img src="images/phrase-bg.jpg" alt="Patinage" /><div class="item-overlay"><span class="item-label">Spectacle sur glace</span></div></div>
+      <div class="gallery-item"><img src="images/hero-bg.jpg" alt="Patinoire" /><div class="item-overlay"><span class="item-label">Installation extérieure</span></div></div>
+      <div class="gallery-item"><img src="images/cibles-bg.jpg" alt="Patinoire" /><div class="item-overlay"><span class="item-label">Grand public · Ambiance féerique</span></div></div>
+    </div>
+  </div>
+
+  <div class="spectacle-section">
+    <div class="gallery-header">
+      <span class="sec-tag">Crystalia Show</span>
+      <h2>Spectacles de <em>patinage artistique</em></h2>
+    </div>
+    <div class="spectacle-grid">
+      <div class="spectacle-item"><img src="images/phrase-bg.jpg" alt="Duo patinage" /><div class="ov-label">Spectacle en couple</div></div>
+      <div class="spectacle-item"><img src="images/hero-bg.jpg" alt="Solo" /><div class="ov-label">Solo · Univers féerique</div></div>
+      <div class="spectacle-item"><img src="images/cibles-bg.jpg" alt="Groupe" /><div class="ov-label">Spectacle de groupe</div></div>
+    </div>
+  </div>
+
+  <section class="cta-section">
+    <img src="images/hero-bg.jpg" alt="Patinoire" />
+    <div class="cta-ov"></div>
+    <div class="cta-inner">
+      <h2>Votre événement sera<br><em>notre prochaine réalisation</em></h2>
+      <p>Parlons de votre projet · Devis gratuit</p>
+      <a href="contact.html" class="btn-white">Nous contacter</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo">Crystalia</div>
+    <nav class="footer-nav">
+      <a href="concept.html">Concept</a>
+      <a href="formules.html">Formules</a>
+      <a href="realisations.html">Réalisations</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="footer-social">
+      <a href="#" target="_blank">Instagram</a>
+      <a href="#" target="_blank">LinkedIn</a>
+      <a href="mailto:contact@crystalia-ice.com">Email</a>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('nav');
+      nav.style.background = window.scrollY > 50 ? 'rgba(7,9,26,0.98)' : 'rgba(7,9,26,0.92)';
+    });
+  </script>
+</body>
+</html>

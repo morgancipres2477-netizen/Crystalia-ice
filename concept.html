@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Concept — Crystalia Ice</title>
+  <meta name="description" content="Découvrez la vision et le concept Crystalia Ice — patinoires éphémères de prestige, partenaire leader européen, événements inoubliables." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .vision { display: grid; grid-template-columns: 1fr 1fr; background: rgba(8,10,26,0.99); }
+    .vision-text { padding: 56px 48px; }
+    .vision-text h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(26px,4vw,36px); font-style: italic; color: #fff; line-height: 1.25; margin-bottom: 20px; }
+    .vision-text h2 em { color: var(--gold); }
+    .vision-text p { font-size: 13px; color: rgba(255,255,255,0.48); line-height: 1.9; font-weight: 300; margin-bottom: 16px; }
+    .vision-img { overflow: hidden; min-height: 360px; }
+    .vision-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.9; }
+
+    .philo { padding: 56px 60px; background: rgba(6,8,20,0.99); text-align: center; border-top: 0.5px solid rgba(201,168,76,0.1); border-bottom: 0.5px solid rgba(201,168,76,0.1); }
+    .stars { color: var(--gold); letter-spacing: 10px; font-size: 13px; opacity: 0.5; margin-bottom: 20px; display: block; }
+    .philo blockquote { font-family: 'Cormorant Garamond', serif; font-size: clamp(18px,3vw,24px); font-style: italic; color: rgba(255,255,255,0.78); line-height: 1.75; max-width: 620px; margin: 0 auto; font-weight: 300; }
+    .philo blockquote em { color: var(--gold); }
+
+    .pourquoi { background: rgba(7,9,22,0.99); padding: 56px 40px; }
+    .pourquoi-header { text-align: center; margin-bottom: 40px; }
+    .pourquoi-header h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(26px,4vw,34px); font-style: italic; color: #fff; margin-bottom: 10px; }
+    .pourquoi-header h2 em { color: var(--gold); }
+    .pourquoi-header p { font-size: 12px; color: rgba(255,255,255,0.3); letter-spacing: 2px; text-transform: uppercase; font-weight: 300; }
+    .chiffres { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; max-width: 640px; margin: 0 auto; }
+    .chiffre { border: 0.5px solid rgba(201,168,76,0.2); padding: 30px 28px; }
+    .chiffre-num { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-style: italic; color: var(--gold); line-height: 1; margin-bottom: 8px; }
+    .chiffre h3 { font-size: 11px; font-weight: 500; color: rgba(255,255,255,0.65); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
+    .chiffre p { font-size: 12px; color: rgba(255,255,255,0.35); line-height: 1.7; font-weight: 300; }
+
+    .partenaire { position: relative; overflow: hidden; min-height: 320px; }
+    .partenaire img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; opacity: 0.9; }
+    .partenaire-ov { position: absolute; inset: 0; background: linear-gradient(to left, rgba(6,9,26,0.95) 40%, rgba(6,9,26,0.2) 100%); z-index: 1; }
+    .partenaire-content { position: relative; z-index: 3; display: flex; justify-content: flex-end; padding: 56px 60px; }
+    .partenaire-text { max-width: 400px; text-align: right; }
+    .partenaire-text h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(24px,4vw,32px); font-style: italic; color: #fff; margin-bottom: 16px; line-height: 1.3; }
+    .partenaire-text h2 em { color: var(--gold); }
+    .partenaire-text p { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.85; font-weight: 300; margin-bottom: 12px; }
+    .partenaire-stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; margin-top: 24px; }
+    .p-stat { border: 0.5px solid rgba(201,168,76,0.2); padding: 14px 10px; text-align: center; }
+    .p-stat-num { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-style: italic; color: var(--gold); }
+    .p-stat-label { font-size: 9px; color: rgba(255,255,255,0.3); letter-spacing: 1px; text-transform: uppercase; margin-top: 4px; line-height: 1.4; display: block; }
+
+    .valeurs { padding: 56px 40px; background: rgba(6,8,18,0.99); }
+    .valeurs-header { text-align: center; margin-bottom: 36px; }
+    .valeurs-header h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(24px,4vw,32px); font-style: italic; color: #fff; }
+    .valeurs-header h2 em { color: var(--gold); }
+    .valeurs-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: rgba(201,168,76,0.1); }
+    .valeur { background: rgba(8,10,26,0.99); padding: 32px 26px; text-align: center; }
+    .valeur-icon { font-size: 28px; color: rgba(201,168,76,0.6); margin-bottom: 14px; display: block; }
+    .valeur h3 { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-style: italic; color: var(--gold); margin-bottom: 10px; }
+    .valeur p { font-size: 12px; color: rgba(255,255,255,0.38); line-height: 1.8; font-weight: 300; }
+
+    @media (max-width: 768px) {
+      .vision { grid-template-columns: 1fr; }
+      .vision-img { min-height: 220px; }
+      .chiffres { grid-template-columns: 1fr; }
+      .valeurs-grid { grid-template-columns: 1fr; }
+      .partenaire-content { padding: 40px 24px; justify-content: flex-start; }
+      .partenaire-text { text-align: left; }
+      .partenaire-stats { grid-template-columns: repeat(3,1fr); }
+      .philo { padding: 40px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="main-nav">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-main">Crystalia</span>
+      <span class="nav-logo-sub">Ice Events</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="concept.html" class="active">Concept</a></li>
+      <li><a href="formules.html">Formules</a></li>
+      <li><a href="realisations.html">Réalisations</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-lang">
+      <span class="active">FR</span><span>EN</span><span>ES</span>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <img src="images/hero-bg.jpg" alt="Patinoire féerique" />
+    <div class="page-hero-ov"></div>
+    <div class="page-hero-content">
+      <div class="page-tag">✦ Notre concept ✦</div>
+      <h1>La glace comme<br><em>art de l'événement</em></h1>
+      <p>Une vision · Une passion · Une expertise</p>
+    </div>
+  </div>
+
+  <div class="vision">
+    <div class="vision-text">
+      <span class="sec-tag">Notre vision</span>
+      <h2>Transformer chaque espace<br>en <em>expérience magique</em></h2>
+      <p>Crystalia est née d'une conviction simple : la glace est bien plus qu'un sport. C'est un univers de magie, d'émotion et de partage qui transcende toutes les cultures et toutes les générations.</p>
+      <p>Notre mission est de rendre cet univers accessible à tous — hôtels, mairies, centres commerciaux — en créant des événements de patinoire éphémères qui marquent les esprits et créent des souvenirs inoubliables.</p>
+      <p>Chaque installation Crystalia est pensée comme une œuvre à part entière, adaptée à votre espace, votre image et votre clientèle.</p>
+    </div>
+    <div class="vision-img">
+      <img src="images/cibles-bg.jpg" alt="Patinoire lumières" />
+    </div>
+  </div>
+
+  <div class="philo">
+    <span class="stars">✦ ✦ ✦</span>
+    <blockquote>« Nous ne louons pas simplement une patinoire.<br>Nous créons <em>un moment</em> que votre public n'oubliera jamais. »</blockquote>
+  </div>
+
+  <div class="pourquoi">
+    <div class="pourquoi-header">
+      <span class="sec-tag">Pourquoi une patinoire ?</span>
+      <h2>Un investissement à<br><em>fort retour sur image</em></h2>
+      <p>Des chiffres qui parlent d'eux-mêmes</p>
+    </div>
+    <div class="chiffres">
+      <div class="chiffre">
+        <div class="chiffre-num">×3</div>
+        <h3>Affluence multipliée</h3>
+        <p>L'ajout d'une patinoire triple en moyenne le nombre de visiteurs d'un événement hivernal.</p>
+      </div>
+      <div class="chiffre">
+        <div class="chiffre-num">2,2M</div>
+        <h3>Visiteurs record</h3>
+        <p>Le marché de Noël de La Défense avec patinoire a attiré 2,2 millions de visiteurs en une seule saison.</p>
+      </div>
+      <div class="chiffre">
+        <div class="chiffre-num">10 Md€</div>
+        <h3>Marché des fêtes</h3>
+        <p>Les événements de Noël génèrent 10 milliards d'euros de retombées économiques en France chaque année.</p>
+      </div>
+      <div class="chiffre">
+        <div class="chiffre-num">100%</div>
+        <h3>Clé en main</h3>
+        <p>De la conception à la démobilisation, nous gérons tout. Vous vous concentrez sur votre événement.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="partenaire">
+    <img src="images/phrase-bg.jpg" alt="Patinage professionnel" />
+    <div class="partenaire-ov"></div>
+    <div class="partenaire-content">
+      <div class="partenaire-text">
+        <span class="sec-tag" style="text-align:right;display:block">Notre expertise technique</span>
+        <h2>Un partenaire<br><em>leader européen</em></h2>
+        <p>Crystalia s'appuie sur l'expertise d'un partenaire technique de référence, acteur incontournable du secteur depuis plus de 20 ans et leader sur le marché européen de la patinoire éphémère.</p>
+        <p>Cette collaboration nous permet de garantir des installations irréprochables, quelle que soit la complexité de votre projet.</p>
+        <div class="partenaire-stats">
+          <div class="p-stat">
+            <div class="p-stat-num">320</div>
+            <span class="p-stat-label">installations par saison</span>
+          </div>
+          <div class="p-stat">
+            <div class="p-stat-num">5000+</div>
+            <span class="p-stat-label">réalisations depuis 1999</span>
+          </div>
+          <div class="p-stat">
+            <div class="p-stat-num">20+</div>
+            <span class="p-stat-label">ans d'expertise</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="valeurs">
+    <div class="valeurs-header">
+      <span class="sec-tag">Ce qui nous définit</span>
+      <h2>Nos <em>valeurs</em></h2>
+    </div>
+    <div class="valeurs-grid">
+      <div class="valeur">
+        <span class="valeur-icon">❄</span>
+        <h3>Excellence</h3>
+        <p>Chaque détail compte. De la qualité de la glace à la décoration, nous n'acceptons que le meilleur.</p>
+      </div>
+      <div class="valeur">
+        <span class="valeur-icon">♡</span>
+        <h3>Émotion</h3>
+        <p>Nous créons des moments qui touchent les cœurs et restent gravés dans la mémoire de vos visiteurs.</p>
+      </div>
+      <div class="valeur">
+        <span class="valeur-icon">◈</span>
+        <h3>Sur mesure</h3>
+        <p>Chaque projet est unique. Nous adaptons chaque installation à votre espace, votre image et vos ambitions.</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="cta-section">
+    <img src="images/cta-bg.jpg" alt="Lumières de Noël" />
+    <div class="cta-ov"></div>
+    <div class="cta-inner">
+      <h2>Prêt à créer votre<br><em>événement ?</em></h2>
+      <p>Découvrez nos formules · Réponse sous 48h</p>
+      <a href="formules.html" class="btn-white">Voir nos formules</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo">Crystalia</div>
+    <nav class="footer-nav">
+      <a href="concept.html">Concept</a>
+      <a href="formules.html">Formules</a>
+      <a href="realisations.html">Réalisations</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="footer-social">
+      <a href="#" target="_blank">Instagram</a>
+      <a href="#" target="_blank">LinkedIn</a>
+      <a href="mailto:contact@crystalia-ice.com">Email</a>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('nav');
+      nav.style.background = window.scrollY > 50 ? 'rgba(7,9,26,0.98)' : 'rgba(7,9,26,0.92)';
+    });
+  </script>
+</body>
+</html>

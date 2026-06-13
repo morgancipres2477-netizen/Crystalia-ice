@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formules — Crystalia Ice</title>
+  <meta name="description" content="Découvrez les 4 formules Crystalia Ice — Essentiel, Prestige, Show et Premium. Patinoires éphémères sur mesure, tarifs sur devis." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .intro { padding: 48px 60px; background: rgba(8,10,26,0.99); text-align: center; border-bottom: 0.5px solid rgba(201,168,76,0.1); }
+    .intro p { font-size: 14px; color: rgba(255,255,255,0.5); max-width: 580px; margin: 0 auto; line-height: 1.9; font-weight: 300; }
+    .intro p em { color: var(--gold); font-style: italic; font-family: 'Cormorant Garamond', serif; font-size: 16px; }
+
+    .packs { padding: 56px 40px; background: rgba(7,9,22,0.99); display: flex; flex-direction: column; gap: 2px; }
+    .pack { display: grid; grid-template-columns: 1fr 2px 1.8fr; overflow: hidden; background: rgba(201,168,76,0.08); }
+    .pack-left { padding: 40px 36px; background: rgba(8,11,28,0.99); display: flex; flex-direction: column; justify-content: center; }
+    .pack-divider { background: rgba(201,168,76,0.2); }
+    .pack-right { padding: 36px 36px; background: rgba(9,12,30,0.99); }
+    .pack-num { font-family: 'Cormorant Garamond', serif; font-size: 64px; font-style: italic; color: rgba(201,168,76,0.55); line-height: 1; margin-bottom: 4px; }
+    .pack-tag { font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: rgba(201,168,76,0.6); margin-bottom: 10px; display: block; }
+    .pack-left h2 { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-style: italic; color: var(--gold); margin-bottom: 12px; }
+    .pack-left p { font-size: 12px; color: rgba(255,255,255,0.4); line-height: 1.8; font-weight: 300; }
+    .pack-ideal { margin-top: 16px; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(201,168,76,0.45); }
+    .pack-ideal span { color: rgba(255,255,255,0.35); font-size: 11px; letter-spacing: 0; text-transform: none; display: block; margin-top: 4px; font-weight: 300; }
+    .pack-right h3 { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: rgba(201,168,76,0.55); margin-bottom: 20px; }
+    .pack-items { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+    .pack-items li { display: flex; align-items: flex-start; gap: 12px; font-size: 12px; color: rgba(255,255,255,0.55); line-height: 1.6; font-weight: 300; }
+    .pack-items li::before { content: '✓'; color: var(--gold); opacity: 0.8; flex-shrink: 0; margin-top: 1px; }
+    .pack.featured { outline: 1px solid rgba(201,168,76,0.35); }
+    .pack.featured .pack-left { background: rgba(12,16,36,0.99); }
+    .pack.featured .pack-right { background: rgba(11,14,34,0.99); }
+    .featured-badge { display: inline-block; font-size: 9px; letter-spacing: 3px; text-transform: uppercase; background: rgba(201,168,76,0.15); color: var(--gold); border: 0.5px solid rgba(201,168,76,0.4); padding: 4px 12px; margin-bottom: 12px; }
+
+    @media (max-width: 768px) {
+      .pack { grid-template-columns: 1fr; }
+      .pack-divider { display: none; }
+      .intro { padding: 36px 24px; }
+      .packs { padding: 32px 16px; }
+      .pack-left, .pack-right { padding: 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="main-nav">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-main">Crystalia</span>
+      <span class="nav-logo-sub">Ice Events</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="concept.html">Concept</a></li>
+      <li><a href="formules.html" class="active">Formules</a></li>
+      <li><a href="realisations.html">Réalisations</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-lang">
+      <span class="active">FR</span><span>EN</span><span>ES</span>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <img src="images/hero-bg.jpg" alt="Patinoire" />
+    <div class="page-hero-ov"></div>
+    <div class="page-hero-content">
+      <div class="page-tag">✦ Nos formules ✦</div>
+      <h1>Votre projet mérite<br><em>une offre sur mesure</em></h1>
+      <p>Chaque projet est unique · Tarifs sur devis</p>
+    </div>
+  </div>
+
+  <div class="intro">
+    <p>Que vous soyez une mairie, un hôtel ou un centre commercial, Crystalia propose une formule adaptée à votre espace, votre budget et votre vision. <em>Chaque installation est pensée sur mesure.</em> Nos tarifs sont établis selon la taille de la patinoire, la durée de l'événement et les prestations choisies.</p>
+  </div>
+
+  <div class="packs">
+    <div class="pack">
+      <div class="pack-left">
+        <div class="pack-num">01</div>
+        <span class="pack-tag">Essentiel</span>
+        <h2>Crystalia Essentiel</h2>
+        <p>L'essentiel pour créer votre événement de patinoire, clé en main et sans contrainte.</p>
+        <div class="pack-ideal">Idéal pour<span>Mairies, petites villes, premiers événements</span></div>
+      </div>
+      <div class="pack-divider"></div>
+      <div class="pack-right">
+        <h3>Inclus dans ce pack</h3>
+        <ul class="pack-items">
+          <li>Patinoire en glace naturelle ou synthétique</li>
+          <li>Location de patins pour les visiteurs</li>
+          <li>Transport, livraison et installation complète</li>
+          <li>Rambardes de sécurité et signalétique</li>
+          <li>Démontage et transport retour inclus</li>
+          <li>Suivi technique pendant toute la durée</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pack">
+      <div class="pack-left">
+        <div class="pack-num">02</div>
+        <span class="pack-tag">Prestige</span>
+        <h2>Crystalia Prestige</h2>
+        <p>Transformez votre patinoire en véritable univers féerique avec une scénographie complète.</p>
+        <div class="pack-ideal">Idéal pour<span>Hôtels, grandes villes, centres commerciaux premium</span></div>
+      </div>
+      <div class="pack-divider"></div>
+      <div class="pack-right">
+        <h3>Tout le pack Essentiel, plus</h3>
+        <ul class="pack-items">
+          <li>Décoration féerique thématique sur mesure</li>
+          <li>Éclairage scénique et lumières d'ambiance</li>
+          <li>Sonorisation et ambiance musicale</li>
+          <li>Arche d'entrée et signalétique premium</li>
+          <li>Vestiaire et espace d'accueil aménagé</li>
+          <li>Conseil en communication événementielle</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pack featured">
+      <div class="pack-left">
+        <div class="featured-badge">⭐ Le plus choisi</div>
+        <div class="pack-num">03</div>
+        <span class="pack-tag">Show</span>
+        <h2>Crystalia Show</h2>
+        <p>Ajoutez un spectacle de patinage artistique pour une inauguration mémorable.</p>
+        <div class="pack-ideal">Idéal pour<span>Hôtels 4-5 étoiles, grands centres commerciaux, événements d'entreprise</span></div>
+      </div>
+      <div class="pack-divider"></div>
+      <div class="pack-right">
+        <h3>Tout le pack Prestige, plus</h3>
+        <ul class="pack-items">
+          <li>Spectacle de patinage artistique professionnel</li>
+          <li>Chorégraphie sur mesure selon votre thème</li>
+          <li>Costumes et mise en scène inclus</li>
+          <li>Animations récurrentes sur la durée de l'événement</li>
+          <li>Présence d'un animateur pour le public</li>
+          <li>Communication et relations presse</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pack">
+      <div class="pack-left">
+        <div class="pack-num">04</div>
+        <span class="pack-tag">Premium</span>
+        <h2>Crystalia Premium</h2>
+        <p>L'expérience ultime — une infrastructure complète avec animations tout au long de l'événement.</p>
+        <div class="pack-ideal">Idéal pour<span>Resorts, grands hôtels de luxe, Dubaï et destinations internationales</span></div>
+      </div>
+      <div class="pack-divider"></div>
+      <div class="pack-right">
+        <h3>Tout le pack Show, plus</h3>
+        <ul class="pack-items">
+          <li>Cours d'initiation au patinage par un professionnel</li>
+          <li>Animations quotidiennes sur toute la durée</li>
+          <li>Espace VIP et hospitalité sur mesure</li>
+          <li>Photo & vidéo professionnelle de l'événement</li>
+          <li>Gestion complète de l'exploitation sur place</li>
+          <li>Accompagnement communication et réseaux sociaux</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <section class="cta-section">
+    <img src="images/cibles-bg.jpg" alt="Patinoire" />
+    <div class="cta-ov"></div>
+    <div class="cta-inner">
+      <h2>Un rêve<br><em>sur mesure</em></h2>
+      <p>Réponse sous 48h · Devis gratuit et sans engagement</p>
+      <a href="contact.html" class="btn-white">Demander un devis</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo">Crystalia</div>
+    <nav class="footer-nav">
+      <a href="concept.html">Concept</a>
+      <a href="formules.html">Formules</a>
+      <a href="realisations.html">Réalisations</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="footer-social">
+      <a href="#" target="_blank">Instagram</a>
+      <a href="#" target="_blank">LinkedIn</a>
+      <a href="mailto:contact@crystalia-ice.com">Email</a>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('nav');
+      nav.style.background = window.scrollY > 50 ? 'rgba(7,9,26,0.98)' : 'rgba(7,9,26,0.92)';
+    });
+  </script>
+</body>
+</html>
