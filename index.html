@@ -16,22 +16,23 @@
 
     /* NAV */
     nav {
-      position: fixed !important;
-      top: 0 !important;
-      left: 0 !important;
-      right: 0 !important;
-      z-index: 1000 !important;
-      display: flex !important;
-      justify-content: space-between !important; padding: 22px 48px !important;
-      align-items: center !important;
-      padding: 22px 48px !important;
-      background: rgba(7,9,26,0.85);
-      border-bottom: 1px solid rgba(201,168,76,0.2) !important;
-      backdrop-filter: blur(10px) !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 48px;
+  background: rgba(7,9,26,0.92);
+  border-bottom: 0.5px solid rgba(201,168,76,0.25);
+  backdrop-filter: blur(10px);
+}
     }
     .nav-logo { text-decoration: none; }
     .nav-logo-main { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-style: italic; color: var(--gold); letter-spacing: 5px; display: block; }
-    .nav-logo-sub { font-size: 8px; letter-spacing: 4px; color: rgba(201,168,76,0.5); text-transform: uppercase; margin-top: 2px; display: block; }
+    .nav-links { display: flex; gap: 40px; list-style: none; }
     .nav-links { display: flex !important; gap: 40px !important; list-style: none !important; }
     .nav-links a {
       font-size: 14px;
