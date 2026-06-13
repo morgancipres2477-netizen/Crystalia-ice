@@ -13,6 +13,8 @@
     :root { --gold: #c9a84c; --night: #07091a; }
     html { scroll-behavior: smooth; }
     body { background: var(--night); color: #f0f4ff; font-family: 'Montserrat', sans-serif; overflow-x: hidden; }
+
+    /* ── NAV ── */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -29,11 +31,13 @@
     .nav-logo-main { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-style: italic; color: var(--gold); letter-spacing: 5px; display: block; }
     .nav-logo-sub { font-size: 8px; letter-spacing: 4px; color: rgba(201,168,76,0.5); text-transform: uppercase; margin-top: 2px; display: block; text-decoration: none; }
     .nav-links { display: flex; gap: 52px; list-style: none; }
-    .nav-links a { font-size: 16px; color: var(--gold); letter-spacing: 3px; text-transform: uppercase; font-weight: 700; text-decoration: none; }
-    .nav-links a:hover { color: #ffffff; }
+    .nav-links a { font-size: 16px; color: #ffffff; letter-spacing: 3px; text-transform: uppercase; font-weight: 700; text-decoration: none; }
+    .nav-links a:hover { color: var(--gold); }
     .nav-lang { display: flex; gap: 10px; }
     .nav-lang span { font-size: 11px; color: rgba(255,255,255,0.4); cursor: pointer; }
     .nav-lang span.active { color: var(--gold); }
+
+    /* ── HERO ── */
     .hero {
       margin-top: 62px;
       position: relative;
@@ -44,37 +48,115 @@
       flex-direction: column;
       justify-content: flex-start;
     }
-    .hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; z-index: 0; }
-    .hero-gradient { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(7,9,26,0.72) 0%, rgba(7,9,26,0.55) 25%, rgba(7,9,26,0.0) 55%, rgba(7,9,26,0.0) 100%); z-index: 1; }
-    .hero-top-tag { position: relative; z-index: 2; text-align: center; padding: 22px 40px 0; }
-    .tag-orn { display: inline-flex; align-items: center; gap: 14px; }
-    .tag-line { width: 90px; height: 0.5px; background: rgba(201,168,76,0.7); }
-    .tag-flake { color: var(--gold); font-size: 13px; }
-    .tag-label { font-family: 'Montserrat', sans-serif; font-size: 15px; font-weight: 600; letter-spacing: 7px; color: var(--gold); text-transform: uppercase; }
-    .hero-text { position: relative; z-index: 2; width: 100%; text-align: center; padding: 20px 40px 0; }
+    .hero-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      z-index: 0;
+    }
+    .hero-gradient {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(7,9,26,0.72) 0%,
+        rgba(7,9,26,0.55) 25%,
+        rgba(7,9,26,0.0) 55%,
+        rgba(7,9,26,0.0) 100%
+      );
+      z-index: 1;
+    }
+    /* TAG EN HAUT */
+    .hero-top-tag {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 22px 40px 0;
+    }
+    .tag-orn {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .tag-line {
+      width: 90px;
+      height: 0.5px;
+      background: rgba(201,168,76,0.7);
+    }
+    .tag-flake {
+      color: var(--gold);
+      font-size: 13px;
+    }
+    .tag-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 7px;
+      color: var(--gold);
+      text-transform: uppercase;
+    }
+    /* TEXTE SOUS LE TAG */
+    .hero-text {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      text-align: center;
+      padding: 20px 40px 0;
+    }
     .hero-orn { display: flex; align-items: center; gap: 12px; justify-content: center; margin-bottom: 14px; }
     .orn-line { width: 44px; height: 0.5px; background: rgba(201,168,76,0.6); }
     .orn-tag { font-size: 11px; letter-spacing: 4px; color: var(--gold); text-transform: uppercase; font-weight: 500; }
-    .hero-text h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 5vw, 64px); font-weight: 300; font-style: italic; color: #fff; line-height: 1.15; margin-bottom: 14px; text-shadow: 0 2px 20px rgba(0,0,0,0.6); }
+    .hero-text h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(36px, 5vw, 64px);
+      font-weight: 300;
+      font-style: italic;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 14px;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.6);
+    }
     .hero-text h1 em { color: var(--gold); }
+    .hero-text p {
+      font-size: 15px;
+      color: rgba(255,255,255,0.9);
+      max-width: 520px;
+      line-height: 1.8;
+      margin: 0 auto 28px;
+      font-weight: 300;
+      text-shadow: 0 1px 8px rgba(0,0,0,0.6);
+    }
     .btn-white { background: #fff; color: var(--night); padding: 16px 48px; font-size: 12px; font-weight: 700; letter-spacing: 5px; text-transform: uppercase; border: none; cursor: pointer; font-family: 'Montserrat', sans-serif; text-decoration: none; display: inline-block; }
     .btn-gold { background: var(--gold); color: var(--night); padding: 15px 42px; font-size: 12px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; border: none; cursor: pointer; font-family: 'Montserrat', sans-serif; text-decoration: none; display: inline-block; }
+
+    /* ── PILIERS ── */
     .piliers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(201,168,76,0.15); }
     .pilier { background: rgba(8,11,28,0.99); padding: 36px 28px; text-align: center; }
     .pilier-icon { font-size: 28px; color: rgba(201,168,76,0.7); margin-bottom: 14px; display: block; }
     .pilier h3 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-style: italic; color: var(--gold); margin-bottom: 10px; }
     .pilier p { font-size: 12px; color: rgba(255,255,255,0.5); line-height: 1.8; font-weight: 300; }
+
+    /* ── SECTIONS TEXTE ── */
     .sec-tag { font-size: 10px; letter-spacing: 5px; color: rgba(201,168,76,0.7); text-transform: uppercase; margin-bottom: 14px; display: block; }
     .section-dark { background: rgba(8,10,26,0.99); padding: 72px 48px; text-align: center; }
     .section-dark h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 4vw, 44px); font-style: italic; color: #fff; margin-bottom: 36px; }
     .section-dark h2 em { color: var(--gold); }
+
+    /* ── CIBLES ── */
     .cibles-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 760px; margin: 0 auto; }
     .cible { border: 0.5px solid rgba(201,168,76,0.3); padding: 28px 22px; background: rgba(255,255,255,0.03); }
     .cible-icon { font-size: 28px; margin-bottom: 12px; display: block; }
     .cible h3 { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-style: italic; color: var(--gold); margin-bottom: 8px; }
     .cible p { font-size: 12px; color: rgba(255,255,255,0.5); line-height: 1.65; font-weight: 300; }
+
+    /* ── IMAGE SECTION ── */
     .section-image { background: rgba(6,8,18,0.99); padding: 0 80px 0; line-height: 0; }
     .section-image img { width: 100%; height: auto; display: block; }
+
+    /* ── TRIO ── */
     .section-trio { display: grid; grid-template-columns: 1fr 1.4fr 1fr; background: rgba(6,8,18,0.99); min-height: 580px; }
     .trio-photo { overflow: hidden; }
     .trio-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
@@ -82,6 +164,8 @@
     .trio-text h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 3.5vw, 48px); font-style: italic; font-weight: 300; color: #fff; line-height: 1.3; margin-bottom: 20px; }
     .trio-text h2 em { color: var(--gold); }
     .trio-text p { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.85; font-weight: 300; max-width: 300px; }
+
+    /* ── FORMULES ── */
     .formules { background: rgba(6,8,20,0.99); padding: 72px 48px; }
     .formules-header { text-align: center; margin-bottom: 36px; }
     .formules-header h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(26px, 4vw, 36px); font-style: italic; color: #fff; margin-bottom: 8px; }
@@ -95,22 +179,30 @@
     .f-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-style: italic; color: var(--gold); margin-bottom: 10px; }
     .f-card p { font-size: 11px; color: rgba(255,255,255,0.45); line-height: 1.75; font-weight: 300; }
     .formules-cta { text-align: center; }
+
+    /* ── CTA ── */
     .section-cta { background: rgba(6,8,18,0.99); padding: 72px 48px; text-align: center; }
     .section-cta h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 4vw, 44px); font-style: italic; color: #fff; margin-bottom: 10px; }
     .section-cta h2 em { color: var(--gold); }
-    .section-cta .cta-desc { font-size: 14px; color: rgba(255,255,255,0.65); line-height: 1.85; font-weight: 300; max-width: 560px; margin: 0 auto 16px; }
+    .section-cta .cta-desc { font-size: 14px; color: rgba(255,255,255,0.65); line-height: 1.85; font-weight: 300; max-width: 560px; margin: 0 auto 16px; letter-spacing: 0; text-transform: none; }
     .section-cta .cta-sub { font-size: 11px; color: rgba(255,255,255,0.35); letter-spacing: 4px; text-transform: uppercase; margin-bottom: 32px; }
+
+    /* ── FOOTER ── */
     footer { padding: 28px 48px; background: rgba(4,5,14,0.99); border-top: 0.5px solid rgba(201,168,76,0.2); display: grid; grid-template-columns: 1fr 1fr 1fr; align-items: center; }
-    .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-style: italic; color: rgba(201,168,76,0.45); letter-spacing: 3px; }
+    .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-style: italic; color: rgba(201,168,76,0.5); letter-spacing: 3px; }
     .footer-nav { display: flex; gap: 20px; justify-content: center; }
-    .footer-nav a { font-size: 10px; color: rgba(255,255,255,0.2); letter-spacing: 2px; text-transform: uppercase; text-decoration: none; }
+    .footer-nav a { font-size: 10px; color: rgba(255,255,255,0.25); letter-spacing: 2px; text-transform: uppercase; text-decoration: none; }
     .footer-nav a:hover { color: var(--gold); }
     .footer-social { display: flex; gap: 16px; justify-content: flex-end; }
-    .footer-social a { font-size: 10px; color: rgba(255,255,255,0.2); letter-spacing: 1px; text-transform: uppercase; text-decoration: none; }
+    .footer-social a { font-size: 10px; color: rgba(255,255,255,0.25); letter-spacing: 1px; text-transform: uppercase; text-decoration: none; }
     .footer-social a:hover { color: var(--gold); }
+
     @media (max-width: 768px) {
       nav { padding: 14px 20px; }
       .nav-links { display: none; }
+      .piliers { grid-template-columns: 1fr; }
+      .cibles-grid { grid-template-columns: 1fr; }
+      .formules-grid { grid-template-columns: 1fr 1fr; }
       .section-trio { grid-template-columns: 1fr; }
       .section-image { padding: 0 20px; }
       footer { grid-template-columns: 1fr; gap: 16px; text-align: center; }
@@ -119,6 +211,8 @@
   </style>
 </head>
 <body>
+
+  <!-- NAV -->
   <nav>
     <a href="index.html" class="nav-logo">
       <span class="nav-logo-main">Crystalia</span>
@@ -136,6 +230,8 @@
       <span>ES</span>
     </div>
   </nav>
+
+  <!-- HERO -->
   <div class="hero">
     <img class="hero-img" src="hero-bg.jpg" alt="Patinoire féerique de nuit" />
     <div class="hero-gradient"></div>
@@ -157,6 +253,8 @@
       <h1>La <em>magie de la glace</em>,<br>où vous le souhaitez</h1>
     </div>
   </div>
+
+  <!-- PILIERS -->
   <section class="piliers">
     <div class="pilier">
       <span class="pilier-icon">❄</span>
@@ -174,6 +272,8 @@
       <p>Vous choisissez l'espace. Nous créons l'événement, de A à Z.</p>
     </div>
   </section>
+
+  <!-- CIBLES -->
   <section class="section-dark">
     <span class="sec-tag">Pour qui ?</span>
     <h2>Une offre pensée pour<br><em>les créateurs d'événements</em></h2>
@@ -195,9 +295,13 @@
       </div>
     </div>
   </section>
+
+  <!-- IMAGE 1 -->
   <div class="section-image">
     <img src="cta-bg.jpg" alt="Patinoire de jour" />
   </div>
+
+  <!-- TRIO -->
   <section class="section-trio">
     <div class="trio-photo">
       <img src="show-left.jpg" alt="Patinage artistique solo" />
@@ -210,6 +314,8 @@
       <img src="show-right.jpg" alt="Duo de patinage artistique" />
     </div>
   </section>
+
+  <!-- FORMULES -->
   <section class="formules">
     <div class="formules-header">
       <span class="sec-tag">Nos formules</span>
@@ -246,15 +352,21 @@
       <a href="formules.html" class="btn-gold">Voir toutes nos formules</a>
     </div>
   </section>
+
+  <!-- IMAGE 3 -->
   <div class="section-image">
     <img src="cibles-bg.jpg" alt="Patinoire vue aérienne" />
   </div>
+
+  <!-- CTA -->
   <section class="section-cta">
     <h2>Créons votre <em>événement</em></h2>
     <p class="cta-desc">Nous installons des patinoires éphémères sur mesure pour vos événements hivernaux.<br>Hôtels, mairies, centres commerciaux — de A à Z, sans contrainte.</p>
     <p class="cta-sub">Espagne · France · Europe · International</p>
     <a href="contact.html" class="btn-white">Demander un devis gratuit</a>
   </section>
+
+  <!-- FOOTER -->
   <footer>
     <div class="footer-logo">Crystalia</div>
     <nav class="footer-nav">
@@ -269,6 +381,7 @@
       <a href="mailto:contact@crystalia-ice.com">Email</a>
     </div>
   </footer>
+
   <script>
     window.addEventListener('scroll', () => {
       document.querySelector('nav').style.background = window.scrollY > 50
