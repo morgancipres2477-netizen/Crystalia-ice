@@ -62,9 +62,8 @@
       inset: 0;
       background: linear-gradient(
         to bottom,
-        rgba(7,9,26,0.55) 0%,
-        rgba(7,9,26,0.05) 25%,
-        rgba(7,9,26,0.05) 55%,
+        rgba(7,9,26,0.0) 0%,
+        rgba(7,9,26,0.0) 60%,
         rgba(7,9,26,0.75) 100%
       );
       z-index: 1;
@@ -74,19 +73,24 @@
       position: relative;
       z-index: 2;
       text-align: center;
-      padding: 28px 40px 0;
+      padding: 20px 40px 0;
     }
     .hero-top-tag .tag-label {
-      display: inline-block;
-      font-size: 15px;
-      font-weight: 700;
-      letter-spacing: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 5px;
       color: #ffffff;
       text-transform: uppercase;
-      background: rgba(201,168,76,0.85);
-      padding: 12px 32px;
-      border-radius: 2px;
+      background: rgba(7,9,26,0.55);
+      border: 1px solid rgba(201,168,76,0.6);
+      padding: 12px 28px;
+      backdrop-filter: blur(4px);
     }
+    .hero-top-tag .tag-label span { color: var(--gold); font-size: 16px; }
     /* TEXTE EN BAS */
     .hero-text {
       position: relative;
