@@ -22,20 +22,20 @@
       right: 0 !important;
       z-index: 1000 !important;
       display: flex !important;
-      justify-content: space-between !important;
+      justify-content: space-between !important; padding: 22px 48px !important;
       align-items: center !important;
-      padding: 22px 60px !important;
-      background: rgba(5,7,20,0.98) !important;
-      border-bottom: 1px solid rgba(201,168,76,0.3) !important;
+      padding: 22px 48px !important;
+      background: #ffffff !important;
+      border-bottom: 1px solid rgba(201,168,76,0.2) !important;
       backdrop-filter: blur(10px) !important;
     }
     .nav-logo { text-decoration: none; }
     .nav-logo-main { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-style: italic; color: var(--gold); letter-spacing: 5px; display: block; }
     .nav-logo-sub { font-size: 8px; letter-spacing: 4px; color: rgba(201,168,76,0.5); text-transform: uppercase; margin-top: 2px; display: block; }
-    .nav-links { display: flex !important; gap: 52px !important; list-style: none !important; }
+    .nav-links { display: flex !important; gap: 40px !important; list-style: none !important; }
     .nav-links a {
       font-size: 14px !important;
-      color: #ffffff !important;
+      color: #07091a !important;
       letter-spacing: 3px !important;
       text-transform: uppercase !important;
       font-weight: 500 !important;
@@ -45,8 +45,8 @@
     }
     .nav-links a:hover { color: var(--gold) !important; }
     .nav-lang { display: flex; gap: 10px; }
-    .nav-lang span { font-size: 12px; color: rgba(255,255,255,0.5); cursor: pointer; }
-    .nav-lang span.active { color: var(--gold); }
+    .nav-lang span { font-size: 12px; color: rgba(7,9,26,0.5); cursor: pointer; }
+    .nav-lang span.active { color: var(--gold); font-weight: 600; }
 
     /* ── HERO — image en fond, on garde ── */
     .hero {
@@ -199,10 +199,10 @@
       <span class="nav-logo-sub">Ice Events</span>
     </a>
     <ul class="nav-links">
-      <li><a href="concept.html">Concept</a></li>
-      <li><a href="formules.html">Formules</a></li>
-      <li><a href="realisations.html">Réalisations</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="concept.html" style="font-size:15px;color:#ffffff;letter-spacing:3px;text-transform:uppercase;font-weight:600;text-decoration:none;">Concept</a></li>
+      <li><a href="formules.html" style="font-size:15px;color:#ffffff;letter-spacing:3px;text-transform:uppercase;font-weight:600;text-decoration:none;">Formules</a></li>
+      <li><a href="realisations.html" style="font-size:15px;color:#ffffff;letter-spacing:3px;text-transform:uppercase;font-weight:600;text-decoration:none;">Réalisations</a></li>
+      <li><a href="contact.html" style="font-size:15px;color:#ffffff;letter-spacing:3px;text-transform:uppercase;font-weight:600;text-decoration:none;">Contact</a></li>
     </ul>
     <div class="nav-lang">
       <span class="active">FR</span><span>EN</span><span>ES</span>
@@ -211,7 +211,7 @@
 
   <!-- HERO — image en fond conservée -->
   <section class="hero" id="hero">
-    <img class="bg" src="images/hero-bg.jpg" alt="Patinoire féerique de nuit" />
+    <img class="bg" src="hero-bg.jpg" alt="Patinoire féerique de nuit" />
     <div class="hero-overlay"></div>
     <canvas class="hero-snow" id="snow-canvas"></canvas>
     <div class="hero-content">
@@ -272,20 +272,20 @@
 
   <!-- IMAGE CIBLES pleine largeur -->
   <div class="section-image">
-    <img src="images/cta-bg.jpg" alt="Patinoire féerique vue aérienne" />
+    <img src="cta-bg.jpg" alt="Patinoire féerique vue aérienne" />
   </div>
 
   <!-- PHRASE — 3 colonnes : photo | texte | photo -->
   <section class="section-trio">
     <div class="trio-photo">
-      <img src="images/show-left.jpg" alt="Patinage artistique solo" />
+      <img src="show-left.jpg" alt="Patinage artistique solo" />
     </div>
     <div class="trio-text">
       <h2>Nous créons l'événement.<br><em>Vous récoltez la magie.</em></h2>
       <p>Chaque installation Crystalia est une expérience unique, pensée pour émerveiller votre public et marquer les esprits durablement.</p>
     </div>
     <div class="trio-photo">
-      <img src="images/show-right.jpg" alt="Duo de patinage artistique" />
+      <img src="show-right.jpg" alt="Duo de patinage artistique" />
     </div>
   </section>
 
@@ -329,7 +329,7 @@
 
   <!-- IMAGE après formules -->
   <div class="section-image">
-    <img src="images/cibles-bg.jpg" alt="Patinoire Costa Blanca" />
+    <img src="cibles-bg.jpg" alt="Patinoire Costa Blanca" />
   </div>
 
   <!-- CTA FINAL — texte sur fond sombre -->
