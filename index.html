@@ -191,7 +191,7 @@
 <body>
 
   <!-- NAV -->
-  <nav>
+  <nav class="main-nav">
     <a href="index.html" class="nav-logo">
       <span class="nav-logo-main">Crystalia</span>
       <span class="nav-logo-sub">Ice Events</span>
@@ -362,7 +362,7 @@
 
   <script>
     window.addEventListener('scroll', () => {
-      document.querySelector('nav').style.background = window.scrollY > 50
+      document.querySelector('nav.main-nav').style.background = window.scrollY > 50
         ? 'rgba(7,9,26,0.99)'
         : 'rgba(7,9,26,0.95)';
     });
