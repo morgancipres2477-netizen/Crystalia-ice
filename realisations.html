@@ -35,6 +35,19 @@
     .spectacle-item:hover img { transform: scale(1.05); }
     .spectacle-item .ov-label { position: absolute; bottom: 0; left: 0; right: 0; padding: 20px 14px 12px; background: linear-gradient(to top, rgba(7,9,26,0.85), transparent); font-family: 'Cormorant Garamond', serif; font-size: 14px; font-style: italic; color: rgba(255,255,255,0.75); }
 
+    /* LIGHTBOX */
+    .lightbox { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(5,7,18,0.96); align-items: center; justify-content: center; }
+    .lightbox.active { display: flex; }
+    .lightbox-img { max-width: 88vw; max-height: 85vh; object-fit: contain; border: 0.5px solid rgba(201,168,76,0.2); }
+    .lightbox-close { position: absolute; top: 24px; right: 32px; font-size: 28px; color: rgba(255,255,255,0.6); cursor: pointer; line-height: 1; transition: color 0.2s; }
+    .lightbox-close:hover { color: var(--gold); }
+    .lightbox-prev, .lightbox-next { position: absolute; top: 50%; transform: translateY(-50%); font-size: 36px; color: rgba(255,255,255,0.5); cursor: pointer; padding: 20px; transition: color 0.2s; user-select: none; }
+    .lightbox-prev { left: 16px; }
+    .lightbox-next { right: 16px; }
+    .lightbox-prev:hover, .lightbox-next:hover { color: var(--gold); }
+    .lightbox-caption { position: absolute; bottom: 28px; left: 0; right: 0; text-align: center; font-family: 'Cormorant Garamond', serif; font-size: 15px; font-style: italic; color: rgba(255,255,255,0.5); }
+    .lightbox-counter { position: absolute; top: 28px; left: 0; right: 0; text-align: center; font-size: 10px; letter-spacing: 3px; color: rgba(201,168,76,0.5); }
+
     @media (max-width: 768px) {
       .gallery-grid { columns: 2; }
       .spectacle-grid { grid-template-columns: 1fr 1fr; }
@@ -86,14 +99,20 @@
       <button class="filter-btn">Spectacle</button>
     </div>
     <div class="gallery-grid" id="gallery">
-      <!-- Les images seront ajoutées ici -->
-      <!-- Exemple : <div class="gallery-item"><img src="real-01.jpg" alt="..." /><div class="item-overlay"><span class="item-label">Place de ville · Noël</span></div></div> -->
-      <div class="gallery-item"><img src="hero-bg.jpg" alt="Patinoire féerique" /><div class="item-overlay"><span class="item-label">Place de ville · Ambiance Noël</span></div></div>
-      <div class="gallery-item"><img src="cibles-bg.jpg" alt="Patinoire lumières" /><div class="item-overlay"><span class="item-label">Vue aérienne · Sapin central</span></div></div>
-      <div class="gallery-item"><img src="cta-bg.jpg" alt="Lumières de Noël" /><div class="item-overlay"><span class="item-label">Éclairage premium · Noël</span></div></div>
-      <div class="gallery-item"><img src="phrase-bg.jpg" alt="Patinage" /><div class="item-overlay"><span class="item-label">Spectacle sur glace</span></div></div>
-      <div class="gallery-item"><img src="hero-bg.jpg" alt="Patinoire" /><div class="item-overlay"><span class="item-label">Installation extérieure</span></div></div>
-      <div class="gallery-item"><img src="cibles-bg.jpg" alt="Patinoire" /><div class="item-overlay"><span class="item-label">Grand public · Ambiance féerique</span></div></div>
+      <div class="gallery-item" onclick="openLightbox(0)"><img src="hero-bg.jpg" alt="Patinoire féerique" /><div class="item-overlay"><span class="item-label">Place de ville · Ambiance Noël</span></div></div>
+      <div class="gallery-item" onclick="openLightbox(1)"><img src="cibles-bg.jpg" alt="Patinoire lumières" /><div class="item-overlay"><span class="item-label">Vue aérienne · Sapin central</span></div></div>
+      <div class="gallery-item" onclick="openLightbox(2)"><img src="cta-bg.jpg" alt="Lumières de Noël" /><div class="item-overlay"><span class="item-label">Éclairage premium · Noël</span></div></div>
+      <div class="gallery-item" onclick="openLightbox(3)"><img src="phrase-bg.jpg" alt="Patinage" /><div class="item-overlay"><span class="item-label">Spectacle sur glace</span></div></div>
+      <div class="gallery-item" onclick="openLightbox(4)"><img src="Capture d'écran 2026-06-12 à 14.29.07.png" alt="Vue aérienne jour" /><div class="item-overlay"><span class="item-label">Place de ville · Vue aérienne</span></div></div>
+      <div class="gallery-item" onclick="openLightbox(5)"><img src="Capture d'écran 2026-06-12 à 14.29.20.png" alt="Vue aérienne nuit" /><div class="item-overlay"><span class="item-label">Grande installation · Nuit</span></div></div>
+      <div class="gallery-item" onclick="openLightbox(6)"><img src="Capture d'écran 2026-06-12 à 14.29.41.png" alt="Patinoire violet" /><div class="item-overlay"><span class="item-label">Éclairage prestige · Violet</span></div></div>
+      <div class="gallery-item" onclick="openLightbox(7)"><img src="Capture d'écran 2026-06-12 à 14.29.57.png" alt="Patinoire vert" /><div class="item-overlay"><span class="item-label">Place de ville · Éclairage vert</span></div></div>
+      <div class="gallery-item" onclick="openLightbox(8)"><img src="Capture d'écran 2026-06-12 à 14.31.01.png" alt="Resort montagne" /><div class="item-overlay"><span class="item-label">Resort · Montagne</span></div></div>
+      <div class="gallery-item" onclick="openLightbox(9)"><img src="Capture d'écran 2026-06-12 à 14.43.31.png" alt="Sculpture de glace" /><div class="item-overlay"><span class="item-label">Événement · Sculpture de glace</span></div></div>
+      <div class="gallery-item" onclick="openLightbox(10)"><img src="Capture d'écran 2026-06-16 à 17.24.02.png" alt="Rooftop Paris" /><div class="item-overlay"><span class="item-label">Centre commercial · Rooftop Paris</span></div></div>
+      <div class="gallery-item" onclick="openLightbox(11)"><img src="Capture d'écran 2026-06-16 à 17.27.44.png" alt="Marché de Noël" /><div class="item-overlay"><span class="item-label">Marché de Noël · Vue aérienne</span></div></div>
+      <div class="gallery-item" onclick="openLightbox(12)"><img src="Capture d'écran 2026-06-16 à 17.31.18.png" alt="Grand Palais" /><div class="item-overlay"><span class="item-label">Grand Palais · Paris</span></div></div>
+      <div class="gallery-item" onclick="openLightbox(13)"><img src="Capture d'écran 2026-06-16 à 17.32.21.png" alt="Grand Palais nuit" /><div class="item-overlay"><span class="item-label">Grand Palais · Spectacle nocturne</span></div></div>
     </div>
   </div>
 
@@ -134,10 +153,62 @@
     </div>
   </footer>
 
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" onclick="closeLightboxOutside(event)">
+    <div class="lightbox-counter" id="lb-counter"></div>
+    <span class="lightbox-close" onclick="closeLightbox()">✕</span>
+    <span class="lightbox-prev" onclick="prevImage(event)">&#8249;</span>
+    <img class="lightbox-img" id="lb-img" src="" alt="" />
+    <span class="lightbox-next" onclick="nextImage(event)">&#8250;</span>
+    <div class="lightbox-caption" id="lb-caption"></div>
+  </div>
+
   <script>
     window.addEventListener('scroll', () => {
       const nav = document.querySelector('nav');
       nav.style.background = window.scrollY > 50 ? 'rgba(7,9,26,0.98)' : 'rgba(7,9,26,0.92)';
+    });
+
+    const items = Array.from(document.querySelectorAll('.gallery-item'));
+    const images = items.map(item => ({
+      src: item.querySelector('img').src,
+      label: item.querySelector('.item-label').textContent
+    }));
+    let current = 0;
+
+    function openLightbox(index) {
+      current = index;
+      updateLightbox();
+      document.getElementById('lightbox').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    function closeLightboxOutside(e) {
+      if (e.target === document.getElementById('lightbox')) closeLightbox();
+    }
+    function updateLightbox() {
+      document.getElementById('lb-img').src = images[current].src;
+      document.getElementById('lb-caption').textContent = images[current].label;
+      document.getElementById('lb-counter').textContent = (current + 1) + ' / ' + images.length;
+    }
+    function prevImage(e) {
+      e.stopPropagation();
+      current = (current - 1 + images.length) % images.length;
+      updateLightbox();
+    }
+    function nextImage(e) {
+      e.stopPropagation();
+      current = (current + 1) % images.length;
+      updateLightbox();
+    }
+    document.addEventListener('keydown', (e) => {
+      if (!document.getElementById('lightbox').classList.contains('active')) return;
+      if (e.key === 'ArrowLeft') prevImage(e);
+      if (e.key === 'ArrowRight') nextImage(e);
+      if (e.key === 'Escape') closeLightbox();
     });
   </script>
 </body>
