@@ -44,6 +44,7 @@
     .partenaire-text h2 em { color: var(--gold); }
     .partenaire-text p { font-size: 17px; color: rgba(255,255,255,0.65); line-height: 1.9; font-weight: 300; margin-bottom: 18px; }
     .partenaire-stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; margin-top: 28px; }
+    .partenaire-v2 .vision-text { background: rgba(8,10,26,0.99); }
     .p-stat { border: 0.5px solid rgba(201,168,76,0.25); padding: 18px 12px; text-align: center; }
     .p-stat-num { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-style: italic; color: var(--gold); }
     .p-stat-label { font-size: 10px; color: rgba(255,255,255,0.45); letter-spacing: 1px; text-transform: uppercase; margin-top: 6px; line-height: 1.4; display: block; }
@@ -58,19 +59,19 @@
     .valeur h3 { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-style: italic; color: var(--gold); margin-bottom: 10px; }
     .valeur p { font-size: 12px; color: rgba(255,255,255,0.38); line-height: 1.8; font-weight: 300; }
 
-    .equip { background: rgba(7,9,22,0.99); padding: 72px 48px; }
-    .equip-header { text-align: center; margin-bottom: 44px; }
-    .equip-header h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px,4vw,40px); font-style: italic; color: #fff; margin-bottom: 10px; }
+    .equip { background: rgba(7,9,22,0.99); padding: 88px 56px; }
+    .equip-header { text-align: center; margin-bottom: 56px; }
+    .equip-header h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(34px,5vw,48px); font-style: italic; color: #fff; margin-bottom: 14px; }
     .equip-header h2 em { color: var(--gold); }
-    .equip-header p { font-size: 13px; color: rgba(255,255,255,0.4); letter-spacing: 2px; text-transform: uppercase; }
-    .equip-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; max-width: 1200px; margin: 0 auto; }
-    .equip-grid-3 { grid-template-columns: repeat(3,1fr); max-width: 980px; }
-    .equip-card { background: rgba(9,12,30,0.99); border: 0.5px solid rgba(201,168,76,0.15); overflow: hidden; }
-    .equip-img { height: 170px; overflow: hidden; }
-    .equip-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.92; }
-    .equip-text { padding: 22px 20px; }
-    .equip-text h3 { font-family: 'Cormorant Garamond', serif; font-size: 19px; font-style: italic; color: var(--gold); margin-bottom: 8px; }
-    .equip-text p { font-size: 12px; color: rgba(255,255,255,0.5); line-height: 1.75; font-weight: 300; }
+    .equip-header p { font-size: 15px; color: rgba(255,255,255,0.5); letter-spacing: 2px; text-transform: uppercase; }
+    .equip-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 22px; max-width: 1320px; margin: 0 auto; }
+    .equip-grid-3 { grid-template-columns: repeat(3,1fr); max-width: 1080px; }
+    .equip-card { background: rgba(9,12,30,0.99); border: 0.5px solid rgba(201,168,76,0.18); overflow: hidden; }
+    .equip-img { height: 260px; overflow: hidden; }
+    .equip-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.95; }
+    .equip-text { padding: 30px 26px; }
+    .equip-text h3 { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-style: italic; color: var(--gold); margin-bottom: 12px; }
+    .equip-text p { font-size: 15px; color: rgba(255,255,255,0.65); line-height: 1.85; font-weight: 300; }
 
     @media (max-width: 768px) {
       .vision { grid-template-columns: 1fr; }
@@ -159,28 +160,27 @@
     </div>
   </div>
 
-  <div class="partenaire">
-    <img src="phrase-bg.jpg" alt="Patinage professionnel" />
-    <div class="partenaire-ov"></div>
-    <div class="partenaire-content">
-      <div class="partenaire-text">
-        <span class="sec-tag" style="text-align:right;display:block">Notre expertise technique</span>
-        <h2>Un partenaire<br><em>leader européen</em></h2>
-        <p>Crystalia s'appuie sur l'expertise d'un partenaire technique de référence, acteur incontournable du secteur depuis plus de 20 ans et leader sur le marché européen de la patinoire éphémère.</p>
-        <p>Cette collaboration nous permet de garantir des installations irréprochables, quelle que soit la complexité de votre projet.</p>
-        <div class="partenaire-stats">
-          <div class="p-stat">
-            <div class="p-stat-num">320</div>
-            <span class="p-stat-label">installations par saison</span>
-          </div>
-          <div class="p-stat">
-            <div class="p-stat-num">5000+</div>
-            <span class="p-stat-label">réalisations depuis 1999</span>
-          </div>
-          <div class="p-stat">
-            <div class="p-stat-num">20+</div>
-            <span class="p-stat-label">ans d'expertise</span>
-          </div>
+  <div class="vision partenaire-v2">
+    <div class="vision-img">
+      <img src="partenaire-bg.png" alt="Patinoire en place publique" />
+    </div>
+    <div class="vision-text">
+      <span class="sec-tag">Notre expertise technique</span>
+      <h2>Un partenaire<br><em>leader européen</em></h2>
+      <p>Crystalia s'appuie sur l'expertise d'un partenaire technique de référence, acteur incontournable du secteur depuis plus de 20 ans et leader sur le marché européen de la patinoire éphémère.</p>
+      <p>Cette collaboration nous permet de garantir des installations irréprochables, quelle que soit la complexité de votre projet.</p>
+      <div class="partenaire-stats">
+        <div class="p-stat">
+          <div class="p-stat-num">320</div>
+          <span class="p-stat-label">installations par saison</span>
+        </div>
+        <div class="p-stat">
+          <div class="p-stat-num">5000+</div>
+          <span class="p-stat-label">réalisations depuis 1999</span>
+        </div>
+        <div class="p-stat">
+          <div class="p-stat-num">20+</div>
+          <span class="p-stat-label">ans d'expertise</span>
         </div>
       </div>
     </div>
