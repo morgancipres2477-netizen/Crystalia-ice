@@ -28,11 +28,12 @@
     .pourquoi-header h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(26px,4vw,34px); font-style: italic; color: #fff; margin-bottom: 10px; }
     .pourquoi-header h2 em { color: var(--gold); }
     .pourquoi-header p { font-size: 12px; color: rgba(255,255,255,0.3); letter-spacing: 2px; text-transform: uppercase; font-weight: 300; }
-    .chiffres { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; max-width: 640px; margin: 0 auto; }
-    .chiffre { border: 0.5px solid rgba(201,168,76,0.2); padding: 30px 28px; }
-    .chiffre-num { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-style: italic; color: var(--gold); line-height: 1; margin-bottom: 8px; }
-    .chiffre h3 { font-size: 11px; font-weight: 500; color: rgba(255,255,255,0.65); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
-    .chiffre p { font-size: 12px; color: rgba(255,255,255,0.35); line-height: 1.7; font-weight: 300; }
+    .chiffres { display: grid; grid-template-columns: repeat(2,1fr); gap: 18px; max-width: 760px; margin: 0 auto; }
+    .chiffres-3 { grid-template-columns: repeat(3,1fr); max-width: 980px; }
+    .chiffre { border: 0.5px solid rgba(201,168,76,0.25); padding: 36px 32px; background: rgba(255,255,255,0.015); }
+    .chiffre .chiffre-icon { font-size: 32px; color: #c9a84c !important; line-height: 1; margin-bottom: 16px; }
+    .chiffre h3 { font-family: 'Cormorant Garamond', serif; font-size: 23px; font-style: italic; color: #c9a84c !important; margin-bottom: 14px; font-weight: 400; }
+    .chiffre p { font-size: 15px; color: rgba(255,255,255,0.7) !important; line-height: 1.85; font-weight: 300; }
 
     .partenaire { position: relative; overflow: hidden; min-height: 320px; }
     .partenaire img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; opacity: 0.9; }
@@ -61,6 +62,9 @@
       .vision { grid-template-columns: 1fr; }
       .vision-img { min-height: 220px; }
       .chiffres { grid-template-columns: 1fr; }
+      .chiffre { padding: 28px 24px; }
+      .chiffre h3 { font-size: 24px; }
+      .chiffre p { font-size: 15px; }
       .valeurs-grid { grid-template-columns: 1fr; }
       .partenaire-content { padding: 40px 24px; justify-content: flex-start; }
       .partenaire-text { text-align: left; }
@@ -106,7 +110,7 @@
       <p>Chaque installation Crystalia est pensée comme une œuvre à part entière, adaptée à votre espace, votre image et votre clientèle.</p>
     </div>
     <div class="vision-img">
-      <img src="cibles-bg.jpg" alt="Patinoire lumières" />
+      <img src="real-01.png" alt="Patinoire de jour" />
     </div>
   </div>
 
@@ -118,29 +122,24 @@
   <div class="pourquoi">
     <div class="pourquoi-header">
       <span class="sec-tag">Pourquoi une patinoire ?</span>
-      <h2>Un investissement à<br><em>fort retour sur image</em></h2>
-      <p>Des chiffres qui parlent d'eux-mêmes</p>
+      <h2>Un projet qui profite<br><em>à tous les acteurs du territoire</em></h2>
+      <p>Une animation, trois bénéfices</p>
     </div>
-    <div class="chiffres">
+    <div class="chiffres chiffres-3">
       <div class="chiffre">
-        <div class="chiffre-num">×3</div>
-        <h3>Affluence multipliée</h3>
-        <p>L'ajout d'une patinoire triple en moyenne le nombre de visiteurs d'un événement hivernal.</p>
+        <div class="chiffre-icon">◈</div>
+        <h3>Pour la ville</h3>
+        <p>Un centre-ville plus vivant, plus visité, plus visible. La patinoire devient la destination de Noël de toute la région et renforce l'image dynamique et familiale de la commune.</p>
       </div>
       <div class="chiffre">
-        <div class="chiffre-num">2,2M</div>
-        <h3>Visiteurs record</h3>
-        <p>Le marché de Noël de La Défense avec patinoire a attiré 2,2 millions de visiteurs en une seule saison.</p>
+        <div class="chiffre-icon">♡</div>
+        <h3>Pour les habitants</h3>
+        <p>Un rendez-vous attendu chaque hiver, où petits et grands se retrouvent. Premiers pas sur la glace, sorties en famille, moments partagés — l'événement qui rythme la saison.</p>
       </div>
       <div class="chiffre">
-        <div class="chiffre-num">10 Md€</div>
-        <h3>Marché des fêtes</h3>
-        <p>Les événements de Noël génèrent 10 milliards d'euros de retombées économiques en France chaque année.</p>
-      </div>
-      <div class="chiffre">
-        <div class="chiffre-num">100%</div>
-        <h3>Clé en main</h3>
-        <p>De la conception à la démobilisation, nous gérons tout. Vous vous concentrez sur votre événement.</p>
+        <div class="chiffre-icon">✦</div>
+        <h3>Pour les commerçants</h3>
+        <p>Plus de passage devant les vitrines, des visiteurs qui prolongent leur présence en centre-ville et consomment davantage dans les cafés, restaurants et boutiques alentour.</p>
       </div>
     </div>
   </div>
