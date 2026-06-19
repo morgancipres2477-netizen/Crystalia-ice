@@ -16,8 +16,8 @@
     .gallery-header h2 em { color: var(--gold); }
 
     .filters { display: flex; justify-content: center; gap: 10px; margin-bottom: 36px; flex-wrap: wrap; }
-    .filter-btn { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.55); border: 0.5px solid rgba(255,255,255,0.2); padding: 9px 20px; cursor: pointer; font-family: 'Montserrat', sans-serif; background: transparent; transition: all 0.2s; }
-    .filter-btn.active, .filter-btn:hover { color: var(--gold); border-color: rgba(201,168,76,0.55); background: rgba(201,168,76,0.08); }
+    .filter-btn { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.35); border: 0.5px solid rgba(255,255,255,0.12); padding: 9px 20px; cursor: default; font-family: 'Montserrat', sans-serif; background: transparent; pointer-events: none; }
+    .filter-btn.active { color: var(--gold); border-color: rgba(201,168,76,0.4); background: rgba(201,168,76,0.06); }
 
     .gallery-grid { columns: 3; gap: 8px; }
     .gallery-item { break-inside: avoid; margin-bottom: 8px; position: relative; overflow: hidden; cursor: pointer; }
