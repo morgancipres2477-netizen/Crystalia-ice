@@ -30,9 +30,64 @@ nav.main-nav {
 .nav-links { display: flex; gap: 28px; list-style: none; }
 .nav-links a { font-size: 11px; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; font-weight: 600; text-decoration: none; transition: color 0.2s; }
 .nav-links a:hover, .nav-links a.active { color: #ffffff; }
-.nav-lang { display: flex; gap: 10px; }
+.nav-lang { display: flex; gap: 10px; align-items: center; }
 .nav-lang span { font-size: 11px; color: var(--text-faint); cursor: pointer; transition: color 0.2s; }
 .nav-lang span.active { color: var(--gold); }
+
+/* NAV — burger button (hidden on desktop) */
+.nav-burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 28px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 102;
+}
+.nav-burger span {
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  background: var(--gold);
+  transition: transform 0.3s, opacity 0.3s;
+}
+.nav-burger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav-burger.open span:nth-child(2) { opacity: 0; }
+.nav-burger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* NAV — mobile dropdown panel */
+.nav-mobile-panel {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: rgba(6,8,20,0.99);
+  border-bottom: var(--border-gold);
+  z-index: 101;
+  padding: 90px 32px 32px;
+  flex-direction: column;
+  gap: 26px;
+  transform: translateY(-100%);
+  transition: transform 0.35s ease;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+.nav-mobile-panel.open { transform: translateY(0); }
+.nav-mobile-panel a {
+  font-size: 14px;
+  color: var(--gold);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+}
+.nav-mobile-panel a.active { color: #fff; }
+.nav-mobile-lang { display: flex; gap: 18px; margin-top: 8px; padding-top: 22px; border-top: var(--border-gold); }
+.nav-mobile-lang span { font-size: 13px; color: var(--text-faint); letter-spacing: 2px; cursor: pointer; }
+.nav-mobile-lang span.active { color: var(--gold); }
 
 /* PAGE HERO */
 .page-hero { position: relative; height: 320px; overflow: hidden; margin-top: 64px; }
@@ -70,10 +125,48 @@ footer { padding: 28px 48px; background: rgba(4,5,14,0.99); border-top: var(--bo
 .cta-inner h2 em { color: var(--gold); }
 .cta-inner p { font-size: 11px; color: rgba(255,255,255,0.35); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 28px; font-weight: 300; }
 
-/* RESPONSIVE */
+/* ============================================
+   RESPONSIVE — TABLETTE (≤ 1024px)
+   ============================================ */
+@media (max-width: 1024px) {
+  nav.main-nav { padding: 16px 32px; }
+  .nav-links { gap: 20px; }
+}
+
+/* ============================================
+   RESPONSIVE — MOBILE (≤ 768px)
+   ============================================ */
 @media (max-width: 768px) {
   nav.main-nav { padding: 14px 20px; }
+  .nav-logo-main { font-size: 22px; letter-spacing: 4px; }
+  .nav-logo-sub { font-size: 7px; letter-spacing: 4px; }
+
+  /* hide desktop nav, show burger */
   .nav-links { display: none; }
-  footer { grid-template-columns: 1fr; gap: 16px; text-align: center; }
-  .footer-nav, .footer-social { justify-content: center; }
+  .nav-lang { display: none; }
+  .nav-burger { display: flex; }
+  .nav-mobile-panel { display: flex; }
+
+  .page-hero { height: 240px; margin-top: 60px; }
+  .page-hero-content { padding: 24px; }
+  .page-hero-content h1 { font-size: clamp(26px, 7vw, 34px); }
+  .page-hero-content p { font-size: 12px; }
+
+  .btn-white, .btn-gold { padding: 14px 32px; font-size: 10px; letter-spacing: 3px; width: 100%; text-align: center; }
+
+  footer { grid-template-columns: 1fr; gap: 18px; text-align: center; padding: 32px 24px; }
+  .footer-nav, .footer-social { justify-content: center; flex-wrap: wrap; }
+
+  .cta-section { min-height: 220px; }
+  .cta-inner { padding: 40px 24px; }
+  .cta-inner p { letter-spacing: 2px; margin-bottom: 22px; }
+}
+
+/* ============================================
+   RESPONSIVE — PETIT MOBILE (≤ 380px)
+   ============================================ */
+@media (max-width: 380px) {
+  nav.main-nav { padding: 12px 16px; }
+  .nav-logo-main { font-size: 19px; }
+  .page-hero-content h1 { font-size: 24px; }
 }

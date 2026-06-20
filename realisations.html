@@ -55,6 +55,32 @@
       .gallery-grid { columns: 1; }
       .spectacle-grid { grid-template-columns: 1fr; }
     }
+
+    /* ============================================
+       RESPONSIVE MOBILE — affinage Réalisations
+       ============================================ */
+    @media (max-width: 768px) {
+      .gallery-section { padding: 36px 16px; }
+      .gallery-header { margin-bottom: 20px; }
+      .filters { gap: 8px; margin-bottom: 24px; }
+      .filter-btn { font-size: 10px; padding: 9px 16px; letter-spacing: 2px; }
+      .gallery-grid { gap: 6px; }
+      .gallery-item { margin-bottom: 6px; }
+      /* On mobile, hover doesn't exist: always show the caption discreetly */
+      .gallery-item .item-overlay { background: rgba(7,9,26,0.35); }
+      .gallery-item .item-label { opacity: 1; transform: none; font-size: 12px; }
+
+      .spectacle-section { padding: 36px 16px; }
+      .spectacle-grid { gap: 6px; }
+      .spectacle-item .ov-label { font-size: 12px; padding: 16px 10px 10px; }
+
+      .lightbox-close { top: 16px; right: 20px; font-size: 24px; }
+      .lightbox-prev, .lightbox-next { font-size: 28px; padding: 12px; }
+      .lightbox-prev { left: 4px; }
+      .lightbox-next { right: 4px; }
+      .lightbox-caption { font-size: 13px; bottom: 18px; padding: 0 50px; }
+      .lightbox-counter { font-size: 9px; top: 18px; }
+    }
   </style>
 </head>
 <body>
@@ -73,7 +99,23 @@
     <div class="nav-lang">
       <span data-lang="fr">FR</span><span data-lang="en">EN</span><span data-lang="es">ES</span>
     </div>
+    <button class="nav-burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
+
+  <div class="nav-mobile-panel">
+    <a href="index.html" data-i18n="nav.accueil">Accueil</a>
+    <a href="concept.html" data-i18n="nav.concept">Concept</a>
+    <a href="formules.html" data-i18n="nav.formules">Formules</a>
+    <a href="realisations.html" class="active" data-i18n="nav.realisations">Réalisations</a>
+    <a href="contact.html" data-i18n="nav.contact">Contact</a>
+    <div class="nav-mobile-lang">
+      <span data-lang="fr">FR</span>
+      <span data-lang="en">EN</span>
+      <span data-lang="es">ES</span>
+    </div>
+  </div>
 
   <div class="page-hero">
     <img src="hero-bg.jpg" alt="Patinoire féerique" />
@@ -161,6 +203,7 @@
   </div>
 
   <script src="i18n.js"></script>
+  <script src="nav-mobile.js"></script>
   <script>
     window.addEventListener('scroll', () => {
       const nav = document.querySelector('nav');
@@ -207,6 +250,22 @@
       if (e.key === 'ArrowLeft') prevImage(e);
       if (e.key === 'ArrowRight') nextImage(e);
       if (e.key === 'Escape') closeLightbox();
+    });
+
+    // Swipe support for mobile
+    let touchStartX = 0;
+    const lightboxEl = document.getElementById('lightbox');
+    lightboxEl.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    });
+    lightboxEl.addEventListener('touchend', (e) => {
+      const touchEndX = e.changedTouches[0].screenX;
+      const diff = touchEndX - touchStartX;
+      if (Math.abs(diff) > 40) {
+        if (diff < 0) { current = (current + 1) % images.length; }
+        else { current = (current - 1 + images.length) % images.length; }
+        updateLightbox();
+      }
     });
   </script>
 </body>

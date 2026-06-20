@@ -179,16 +179,46 @@
     .nav-lang span { cursor: pointer; }
     .nav-lang span.active { color: var(--gold); font-weight: 700; }
 
+    /* ============================================
+       RESPONSIVE MOBILE — page d'accueil
+       ============================================ */
     @media (max-width: 768px) {
-      nav { padding: 14px 20px; }
-      .nav-links { display: none; }
+      .hero { height: 86vh; min-height: 520px; margin-top: 58px; }
+      .hero-top-tag { padding: 16px 20px 0; }
+      .tag-line { width: 40px; }
+      .tag-label { font-size: 10px; letter-spacing: 4px; }
+      .hero-text { padding: 14px 22px 0; }
+      .hero-text h1 { font-size: clamp(28px, 8vw, 38px); margin-bottom: 10px; }
+      .hero-text p { font-size: 13px; max-width: 320px; }
+
       .piliers { grid-template-columns: 1fr; }
-      .cibles-grid { grid-template-columns: 1fr; }
-      .formules-grid { grid-template-columns: 1fr 1fr; }
-      .section-trio { grid-template-columns: 1fr; }
+      .pilier { padding: 28px 24px; }
+
+      .section-dark { padding: 48px 24px; }
+      .section-dark h2 { margin-bottom: 26px; }
+      .cibles-grid { grid-template-columns: 1fr; gap: 12px; }
+
       .section-image { padding: 0 20px; }
-      footer { grid-template-columns: 1fr; gap: 16px; text-align: center; }
+
+      .section-trio { grid-template-columns: 1fr; min-height: auto; }
+      .trio-photo { height: 220px; }
+      .trio-text { padding: 36px 24px; }
+      .trio-text p { max-width: none; }
+
+      .formules { padding: 48px 20px; }
+      .formules-grid { grid-template-columns: 1fr 1fr; gap: 1px; }
+      .f-card { padding: 22px 14px; }
+
+      .section-cta { padding: 48px 24px; }
+      .section-cta .cta-desc { font-size: 13px; }
+
+      footer { grid-template-columns: 1fr; gap: 16px; text-align: center; padding: 32px 24px; }
       .footer-nav, .footer-social { justify-content: center; }
+    }
+
+    @media (max-width: 480px) {
+      .formules-grid { grid-template-columns: 1fr; }
+      .hero-text h1 { font-size: 26px; }
     }
   </style>
 </head>
@@ -211,7 +241,24 @@
       <span data-lang="en">EN</span>
       <span data-lang="es">ES</span>
     </div>
+    <button class="nav-burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
+
+  <!-- NAV MOBILE PANEL -->
+  <div class="nav-mobile-panel">
+    <a href="index.html" class="active" data-i18n="nav.accueil">Accueil</a>
+    <a href="concept.html" data-i18n="nav.concept">Concept</a>
+    <a href="formules.html" data-i18n="nav.formules">Formules</a>
+    <a href="realisations.html" data-i18n="nav.realisations">Réalisations</a>
+    <a href="contact.html" data-i18n="nav.contact">Contact</a>
+    <div class="nav-mobile-lang">
+      <span data-lang="fr">FR</span>
+      <span data-lang="en">EN</span>
+      <span data-lang="es">ES</span>
+    </div>
+  </div>
 
   <!-- HERO -->
   <div class="hero">
@@ -365,6 +412,7 @@
   </footer>
 
   <script src="i18n.js"></script>
+  <script src="nav-mobile.js"></script>
   <script>
     window.addEventListener('scroll', () => {
       document.querySelector('nav.main-nav').style.background = window.scrollY > 50

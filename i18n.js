@@ -14,6 +14,7 @@
 const TRANSLATIONS = {
   fr: {
     nav: {
+      accueil: "Accueil",
       concept: "Concept",
       formules: "Formules",
       realisations: "Réalisations",
@@ -175,7 +176,7 @@ const TRANSLATIONS = {
   },
 
   en: {
-    nav: { concept: "Concept", formules: "Packages", realisations: "Our Work", contact: "Contact" },
+    nav: { accueil: "Home", concept: "Concept", formules: "Packages", realisations: "Our Work", contact: "Contact" },
 
     hero: { tag: "Pop-up ice rinks", title: "The <em>magic of ice</em>,<br>wherever you want it" },
     piliers: {
@@ -321,7 +322,7 @@ const TRANSLATIONS = {
   },
 
   es: {
-    nav: { concept: "Concepto", formules: "Paquetes", realisations: "Proyectos", contact: "Contacto" },
+    nav: { accueil: "Inicio", concept: "Concepto", formules: "Paquetes", realisations: "Proyectos", contact: "Contacto" },
 
     hero: { tag: "Pistas de hielo efímeras", title: "La <em>magia del hielo</em>,<br>donde tú quieras" },
     piliers: {

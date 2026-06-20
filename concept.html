@@ -73,19 +73,44 @@
     .equip-text h3 { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-style: italic; color: var(--gold); margin-bottom: 12px; }
     .equip-text p { font-size: 15px; color: rgba(255,255,255,0.65); line-height: 1.85; font-weight: 300; }
 
+    /* ============================================
+       RESPONSIVE MOBILE — page Concept
+       ============================================ */
     @media (max-width: 768px) {
       .vision { grid-template-columns: 1fr; }
+      .vision-text { padding: 40px 24px; }
+      .vision-text h2 { font-size: clamp(26px,7vw,32px); margin-bottom: 18px; }
+      .vision-text p { font-size: 15px; margin-bottom: 16px; }
       .vision-img { min-height: 220px; }
-      .chiffres { grid-template-columns: 1fr; }
-      .chiffre { padding: 28px 24px; }
-      .chiffre h3 { font-size: 24px; }
-      .chiffre p { font-size: 15px; }
+
+      .philo { padding: 36px 24px; }
+      .philo blockquote { font-size: 17px; }
+
+      .pourquoi { padding: 40px 22px; }
+      .pourquoi-header { margin-bottom: 28px; }
+      .chiffres, .chiffres-3 { grid-template-columns: 1fr; gap: 14px; max-width: none; }
+      .chiffre { padding: 26px 22px; }
+      .chiffre h3 { font-size: 21px; }
+      .chiffre p { font-size: 14px; }
+
+      .partenaire-content { padding: 32px 22px; justify-content: flex-start; }
+      .partenaire-text { text-align: left; max-width: none; }
+      .partenaire-text h2 { font-size: clamp(26px,7vw,32px); }
+      .partenaire-text p { font-size: 15px; }
+      .partenaire-stats { grid-template-columns: repeat(3,1fr); gap: 8px; margin-top: 20px; }
+      .p-stat { padding: 12px 6px; }
+      .p-stat-num { font-size: 24px; }
+      .p-stat-label { font-size: 8px; }
+
+      .equip { padding: 48px 22px; }
+      .equip-header { margin-bottom: 32px; }
+      .equip-grid, .equip-grid-3 { grid-template-columns: 1fr; gap: 16px; max-width: none; }
+      .equip-img { height: 200px; }
+
+      .valeurs { padding: 40px 22px; }
+      .valeurs-header { margin-bottom: 24px; }
       .valeurs-grid { grid-template-columns: 1fr; }
-      .equip-grid { grid-template-columns: 1fr 1fr; }
-      .partenaire-content { padding: 40px 24px; justify-content: flex-start; }
-      .partenaire-text { text-align: left; }
-      .partenaire-stats { grid-template-columns: repeat(3,1fr); }
-      .philo { padding: 40px 24px; }
+      .valeur { padding: 26px 22px; }
     }
   </style>
 </head>
@@ -105,7 +130,23 @@
     <div class="nav-lang">
       <span data-lang="fr">FR</span><span data-lang="en">EN</span><span data-lang="es">ES</span>
     </div>
+    <button class="nav-burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
+
+  <div class="nav-mobile-panel">
+    <a href="index.html" data-i18n="nav.accueil">Accueil</a>
+    <a href="concept.html" class="active" data-i18n="nav.concept">Concept</a>
+    <a href="formules.html" data-i18n="nav.formules">Formules</a>
+    <a href="realisations.html" data-i18n="nav.realisations">Réalisations</a>
+    <a href="contact.html" data-i18n="nav.contact">Contact</a>
+    <div class="nav-mobile-lang">
+      <span data-lang="fr">FR</span>
+      <span data-lang="en">EN</span>
+      <span data-lang="es">ES</span>
+    </div>
+  </div>
 
   <div class="page-hero">
     <img src="hero-bg.jpg" alt="Patinoire féerique" />
@@ -267,6 +308,7 @@
   </footer>
 
   <script src="i18n.js"></script>
+  <script src="nav-mobile.js"></script>
   <script>
     window.addEventListener('scroll', () => {
       const nav = document.querySelector('nav');

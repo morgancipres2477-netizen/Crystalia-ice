@@ -46,6 +46,26 @@
       .pack-left h2 { font-size: 28px; }
       .pack-img { height: 220px; }
     }
+
+    /* ============================================
+       RESPONSIVE MOBILE — affinage Formules
+       ============================================ */
+    @media (max-width: 768px) {
+      .intro { padding: 36px 22px; }
+      .intro p { font-size: 15px; line-height: 1.8; }
+
+      .packs { padding: 40px 16px; gap: 18px; }
+      .pack-left, .pack-right { padding: 28px 22px; }
+      .pack-num { font-size: 52px; margin-bottom: 4px; }
+      .pack-tag { font-size: 11px; margin-bottom: 10px; }
+      .pack-left h2 { font-size: 24px; margin-bottom: 12px; }
+      .pack-left p { font-size: 14px; }
+      .pack-right h3 { font-size: 11px; margin-bottom: 18px; }
+      .pack-items { gap: 12px; }
+      .pack-items li { font-size: 14px; gap: 10px; }
+      .pack-img { height: 180px; }
+      .featured-badge { font-size: 10px; padding: 6px 12px; }
+    }
   </style>
 </head>
 <body>
@@ -64,7 +84,23 @@
     <div class="nav-lang">
       <span data-lang="fr">FR</span><span data-lang="en">EN</span><span data-lang="es">ES</span>
     </div>
+    <button class="nav-burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
+
+  <div class="nav-mobile-panel">
+    <a href="index.html" data-i18n="nav.accueil">Accueil</a>
+    <a href="concept.html" data-i18n="nav.concept">Concept</a>
+    <a href="formules.html" class="active" data-i18n="nav.formules">Formules</a>
+    <a href="realisations.html" data-i18n="nav.realisations">Réalisations</a>
+    <a href="contact.html" data-i18n="nav.contact">Contact</a>
+    <div class="nav-mobile-lang">
+      <span data-lang="fr">FR</span>
+      <span data-lang="en">EN</span>
+      <span data-lang="es">ES</span>
+    </div>
+  </div>
 
   <div class="page-hero">
     <img src="hero-bg.jpg" alt="Patinoire" />
@@ -197,6 +233,7 @@
   </footer>
 
   <script src="i18n.js"></script>
+  <script src="nav-mobile.js"></script>
   <script>
     window.addEventListener('scroll', () => {
       const nav = document.querySelector('nav');
