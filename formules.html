@@ -15,14 +15,12 @@
     .intro p em { color: var(--gold); font-style: italic; font-family: 'Cormorant Garamond', serif; font-size: 20px; }
 
     .packs { padding: 80px 56px; background: rgba(7,9,22,0.99); display: flex; flex-direction: column; gap: 28px; max-width: 1280px; margin: 0 auto; }
-    .pack { display: grid; grid-template-columns: 1fr 1px 1.6fr; overflow: hidden; background: rgba(201,168,76,0.1); border-radius: 2px; }
-    .pack-left { padding: 56px 48px; background: rgba(8,11,28,0.99); display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden; }
-    .pack-left-bg { position: absolute; inset: 0; z-index: 0; }
-    .pack-left-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.5; }
-    .pack-left-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, rgba(8,11,28,0.97) 25%, rgba(8,11,28,0.65)); }
-    .pack-left > *:not(.pack-left-bg) { position: relative; z-index: 1; }
+    .pack { display: grid; grid-template-columns: 1fr 1px 1.3fr 280px; overflow: hidden; background: rgba(201,168,76,0.1); border-radius: 2px; }
+    .pack-left { padding: 56px 48px; background: rgba(8,11,28,0.99); display: flex; flex-direction: column; justify-content: center; }
     .pack-divider { background: rgba(201,168,76,0.2); }
-    .pack-right { padding: 56px 52px; background: rgba(9,12,30,0.99); }
+    .pack-right { padding: 56px 40px 56px 52px; background: rgba(9,12,30,0.99); }
+    .pack-img { overflow: hidden; }
+    .pack-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .pack-num { font-family: 'Cormorant Garamond', serif; font-size: 88px; font-style: italic; color: rgba(201,168,76,0.6); line-height: 1; margin-bottom: 8px; }
     .pack-tag { font-size: 12px; letter-spacing: 5px; text-transform: uppercase; color: rgba(201,168,76,0.75); margin-bottom: 16px; display: block; font-weight: 600; }
     .pack-left h2 { font-family: 'Cormorant Garamond', serif; font-size: 38px; font-style: italic; color: var(--gold); margin-bottom: 18px; line-height: 1.15; }
@@ -46,6 +44,7 @@
       .pack-left, .pack-right { padding: 36px 28px; }
       .pack-num { font-size: 64px; }
       .pack-left h2 { font-size: 28px; }
+      .pack-img { height: 220px; }
     }
   </style>
 </head>
@@ -84,7 +83,6 @@
   <div class="packs">
     <div class="pack">
       <div class="pack-left">
-        <div class="pack-left-bg"><img src="real-01.png" alt="" /></div>
         <div class="pack-num">01</div>
         <span class="pack-tag">Essentiel</span>
         <h2>Crystalia Essentiel</h2>
@@ -103,11 +101,11 @@
           <li>Suivi technique pendant toute la durée</li>
         </ul>
       </div>
+      <div class="pack-img"><img src="real-01.png" alt="Crystalia Essentiel" /></div>
     </div>
 
     <div class="pack">
       <div class="pack-left">
-        <div class="pack-left-bg"><img src="real-08.png" alt="" /></div>
         <div class="pack-num">02</div>
         <span class="pack-tag">Prestige</span>
         <h2>Crystalia Prestige</h2>
@@ -126,11 +124,11 @@
           <li>Conseil en communication événementielle</li>
         </ul>
       </div>
+      <div class="pack-img"><img src="real-08.png" alt="Crystalia Prestige" /></div>
     </div>
 
     <div class="pack featured">
       <div class="pack-left">
-        <div class="pack-left-bg"><img src="show-01.png" alt="" /></div>
         <div class="featured-badge">⭐ Le plus choisi</div>
         <div class="pack-num">03</div>
         <span class="pack-tag">Show</span>
@@ -150,11 +148,11 @@
           <li>Communication et relations presse</li>
         </ul>
       </div>
+      <div class="pack-img"><img src="show-01.png" alt="Crystalia Show" /></div>
     </div>
 
     <div class="pack">
       <div class="pack-left">
-        <div class="pack-left-bg"><img src="real-07.png" alt="" /></div>
         <div class="pack-num">04</div>
         <span class="pack-tag">Premium</span>
         <h2>Crystalia Premium</h2>
@@ -173,6 +171,7 @@
           <li>Accompagnement communication et réseaux sociaux</li>
         </ul>
       </div>
+      <div class="pack-img"><img src="real-07.png" alt="Crystalia Premium" /></div>
     </div>
   </div>
 
