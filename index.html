@@ -175,6 +175,10 @@
     .footer-social a { font-size: 10px; color: rgba(255,255,255,0.25); letter-spacing: 1px; text-transform: uppercase; text-decoration: none; }
     .footer-social a:hover { color: var(--gold); }
 
+    /* ── SÉLECTEUR DE LANGUE ── */
+    .nav-lang span { cursor: pointer; }
+    .nav-lang span.active { color: var(--gold); font-weight: 700; }
+
     @media (max-width: 768px) {
       nav { padding: 14px 20px; }
       .nav-links { display: none; }
@@ -197,15 +201,15 @@
       <span class="nav-logo-sub">Ice Events</span>
     </a>
     <ul class="nav-links">
-      <li><a href="concept.html">Concept</a></li>
-      <li><a href="formules.html">Formules</a></li>
-      <li><a href="realisations.html">Réalisations</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="concept.html" data-i18n="nav.concept">Concept</a></li>
+      <li><a href="formules.html" data-i18n="nav.formules">Formules</a></li>
+      <li><a href="realisations.html" data-i18n="nav.realisations">Réalisations</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
     </ul>
     <div class="nav-lang">
-      <span class="active">FR</span>
-      <span>EN</span>
-      <span>ES</span>
+      <span data-lang="fr">FR</span>
+      <span data-lang="en">EN</span>
+      <span data-lang="es">ES</span>
     </div>
   </nav>
 
@@ -217,7 +221,7 @@
       <div class="tag-orn">
         <div class="tag-line"></div>
         <span class="tag-flake">❄</span>
-        <span class="tag-label">Patinoires éphémères</span>
+        <span class="tag-label" data-i18n="hero.tag">Patinoires éphémères</span>
         <span class="tag-flake">❄</span>
         <div class="tag-line"></div>
       </div>
@@ -228,7 +232,7 @@
         <span class="orn-tag">Crystalia Ice Events</span>
         <div class="orn-line"></div>
       </div>
-      <h1>La <em>magie de la glace</em>,<br>où vous le souhaitez</h1>
+      <h1 data-i18n-html="hero.title">La <em>magie de la glace</em>,<br>où vous le souhaitez</h1>
     </div>
   </div>
 
@@ -236,40 +240,40 @@
   <section class="piliers">
     <div class="pilier">
       <span class="pilier-icon">❄</span>
-      <h3>Glace naturelle</h3>
-      <p>Une vraie patinoire réfrigérée pour une expérience authentique et premium.</p>
+      <h3 data-i18n="piliers.naturelle.titre">Glace naturelle</h3>
+      <p data-i18n="piliers.naturelle.texte">Une vraie patinoire réfrigérée pour une expérience authentique et premium.</p>
     </div>
     <div class="pilier">
       <span class="pilier-icon">◆</span>
-      <h3>Glace synthétique</h3>
-      <p>Sans eau ni énergie. S'installe partout, même en plein soleil méditerranéen.</p>
+      <h3 data-i18n="piliers.synthetique.titre">Glace synthétique</h3>
+      <p data-i18n="piliers.synthetique.texte">Sans eau ni énergie. S'installe partout, même en plein soleil méditerranéen.</p>
     </div>
     <div class="pilier">
       <span class="pilier-icon">✦</span>
-      <h3>Clé en main</h3>
-      <p>Vous choisissez l'espace. Nous créons l'événement, de A à Z.</p>
+      <h3 data-i18n="piliers.cle.titre">Clé en main</h3>
+      <p data-i18n="piliers.cle.texte">Vous choisissez l'espace. Nous créons l'événement, de A à Z.</p>
     </div>
   </section>
 
   <!-- CIBLES -->
   <section class="section-dark">
-    <span class="sec-tag">Pour qui ?</span>
-    <h2>Une offre pensée pour<br><em>les créateurs d'événements</em></h2>
+    <span class="sec-tag" data-i18n="cibles.tag">Pour qui ?</span>
+    <h2 data-i18n-html="cibles.titre">Une offre pensée pour<br><em>les créateurs d'événements</em></h2>
     <div class="cibles-grid">
       <div class="cible">
         <span class="cible-icon">🏛</span>
-        <h3>Mairies</h3>
-        <p>Créez le rendez-vous hivernal incontournable de votre ville.</p>
+        <h3 data-i18n="cibles.mairies.titre">Mairies</h3>
+        <p data-i18n="cibles.mairies.texte">Créez le rendez-vous hivernal incontournable de votre ville.</p>
       </div>
       <div class="cible">
         <span class="cible-icon">🏨</span>
-        <h3>Hôtels & Resorts</h3>
-        <p>Offrez une expérience exclusive qui fidélise et fait rayonner votre établissement.</p>
+        <h3 data-i18n="cibles.hotels.titre">Hôtels & Resorts</h3>
+        <p data-i18n="cibles.hotels.texte">Offrez une expérience exclusive qui fidélise et fait rayonner votre établissement.</p>
       </div>
       <div class="cible">
         <span class="cible-icon">🛍</span>
-        <h3>Centres commerciaux</h3>
-        <p>Générez du flux et créez l'animation de la saison.</p>
+        <h3 data-i18n="cibles.centres.titre">Centres commerciaux</h3>
+        <p data-i18n="cibles.centres.texte">Générez du flux et créez l'animation de la saison.</p>
       </div>
     </div>
   </section>
@@ -285,8 +289,8 @@
       <img src="show-left.jpg" alt="Patinage artistique solo" />
     </div>
     <div class="trio-text">
-      <h2>Nous créons l'événement.<br><em>Vous récoltez la magie.</em></h2>
-      <p>Chaque installation Crystalia est une expérience unique, pensée pour émerveiller votre public et marquer les esprits durablement.</p>
+      <h2 data-i18n-html="trio.titre">Nous créons l'événement.<br><em>Vous récoltez la magie.</em></h2>
+      <p data-i18n="trio.texte">Chaque installation Crystalia est une expérience unique, pensée pour émerveiller votre public et marquer les esprits durablement.</p>
     </div>
     <div class="trio-photo">
       <img src="show-right.jpg" alt="Duo de patinage artistique" />
@@ -296,38 +300,38 @@
   <!-- FORMULES -->
   <section class="formules">
     <div class="formules-header">
-      <span class="sec-tag">Nos formules</span>
-      <h2><em>Un pack pour chaque ambition</em></h2>
-      <p>Sur devis · Chaque projet est unique</p>
+      <span class="sec-tag" data-i18n="formules.tag">Nos formules</span>
+      <h2 data-i18n-html="formules.titre"><em>Un pack pour chaque ambition</em></h2>
+      <p data-i18n="formules.sousTitre">Sur devis · Chaque projet est unique</p>
     </div>
     <div class="formules-grid">
       <div class="f-card">
         <div class="f-num">01</div>
-        <span class="f-tag">Essentiel</span>
-        <h3>Crystalia Essentiel</h3>
-        <p>Patinoire + patins + installation & démontage complet.</p>
+        <span class="f-tag" data-i18n="formules.essentiel.tag">Essentiel</span>
+        <h3 data-i18n="formules.essentiel.titre">Crystalia Essentiel</h3>
+        <p data-i18n="formules.essentiel.texte">Patinoire + patins + installation & démontage complet.</p>
       </div>
       <div class="f-card">
         <div class="f-num">02</div>
-        <span class="f-tag">Prestige</span>
-        <h3>Crystalia Prestige</h3>
-        <p>Essentiel + décoration féerique + éclairage + ambiance musicale.</p>
+        <span class="f-tag" data-i18n="formules.prestige.tag">Prestige</span>
+        <h3 data-i18n="formules.prestige.titre">Crystalia Prestige</h3>
+        <p data-i18n="formules.prestige.texte">Essentiel + décoration féerique + éclairage + ambiance musicale.</p>
       </div>
       <div class="f-card featured">
         <div class="f-num">03</div>
-        <span class="f-tag">Show</span>
-        <h3>Crystalia Show</h3>
-        <p>Prestige + spectacle de patinage artistique pour l'inauguration.</p>
+        <span class="f-tag" data-i18n="formules.show.tag">Show</span>
+        <h3 data-i18n="formules.show.titre">Crystalia Show</h3>
+        <p data-i18n="formules.show.texte">Prestige + spectacle de patinage artistique pour l'inauguration.</p>
       </div>
       <div class="f-card">
         <div class="f-num">04</div>
-        <span class="f-tag">Premium</span>
-        <h3>Crystalia Premium</h3>
-        <p>L'expérience complète — show, animations et infrastructure sur mesure.</p>
+        <span class="f-tag" data-i18n="formules.premium.tag">Premium</span>
+        <h3 data-i18n="formules.premium.titre">Crystalia Premium</h3>
+        <p data-i18n="formules.premium.texte">L'expérience complète — show, animations et infrastructure sur mesure.</p>
       </div>
     </div>
     <div class="formules-cta">
-      <a href="formules.html" class="btn-gold">Voir toutes nos formules</a>
+      <a href="formules.html" class="btn-gold" data-i18n="formules.cta">Voir toutes nos formules</a>
     </div>
   </section>
 
@@ -338,20 +342,20 @@
 
   <!-- CTA -->
   <section class="section-cta">
-    <h2>Créons votre <em>événement</em></h2>
-    <p class="cta-desc">Nous installons des patinoires éphémères sur mesure pour vos événements hivernaux.<br>Hôtels, mairies, centres commerciaux — de A à Z, sans contrainte.</p>
-    <p class="cta-sub">Espagne · France · Europe · International</p>
-    <a href="contact.html" class="btn-white">Demander un devis gratuit</a>
+    <h2 data-i18n-html="cta.titre">Créons votre <em>événement</em></h2>
+    <p class="cta-desc" data-i18n-html="cta.texte">Nous installons des patinoires éphémères sur mesure pour vos événements hivernaux.<br>Hôtels, mairies, centres commerciaux — de A à Z, sans contrainte.</p>
+    <p class="cta-sub" data-i18n="cta.zones">Espagne · France · Europe · International</p>
+    <a href="contact.html" class="btn-white" data-i18n="cta.bouton">Demander un devis gratuit</a>
   </section>
 
   <!-- FOOTER -->
   <footer>
     <div class="footer-logo">Crystalia</div>
     <nav class="footer-nav">
-      <a href="concept.html">Concept</a>
-      <a href="formules.html">Formules</a>
-      <a href="realisations.html">Réalisations</a>
-      <a href="contact.html">Contact</a>
+      <a href="concept.html" data-i18n="nav.concept">Concept</a>
+      <a href="formules.html" data-i18n="nav.formules">Formules</a>
+      <a href="realisations.html" data-i18n="nav.realisations">Réalisations</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
     </nav>
     <div class="footer-social">
       <a href="#" target="_blank">Instagram</a>
@@ -360,6 +364,7 @@
     </div>
   </footer>
 
+  <script src="i18n.js"></script>
   <script>
     window.addEventListener('scroll', () => {
       document.querySelector('nav.main-nav').style.background = window.scrollY > 50
