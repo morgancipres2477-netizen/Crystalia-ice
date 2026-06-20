@@ -32,9 +32,4 @@ document.addEventListener('DOMContentLoaded', () => {
   panel.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', closeMenu);
   });
-
-  // Close when a language is picked in the mobile panel
-  panel.querySelectorAll('[data-lang]').forEach(span => {
-    span.addEventListener('click', closeMenu);
-  });
 });
