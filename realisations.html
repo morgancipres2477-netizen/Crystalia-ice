@@ -65,13 +65,13 @@
       <span class="nav-logo-sub">Ice Events</span>
     </a>
     <ul class="nav-links">
-      <li><a href="concept.html">Concept</a></li>
-      <li><a href="formules.html">Formules</a></li>
-      <li><a href="realisations.html" class="active">Réalisations</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="concept.html" data-i18n="nav.concept">Concept</a></li>
+      <li><a href="formules.html" data-i18n="nav.formules">Formules</a></li>
+      <li><a href="realisations.html" class="active" data-i18n="nav.realisations">Réalisations</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
     </ul>
     <div class="nav-lang">
-      <span class="active">FR</span><span>EN</span><span>ES</span>
+      <span data-lang="fr">FR</span><span data-lang="en">EN</span><span data-lang="es">ES</span>
     </div>
   </nav>
 
@@ -79,49 +79,49 @@
     <img src="hero-bg.jpg" alt="Patinoire féerique" />
     <div class="page-hero-ov"></div>
     <div class="page-hero-content">
-      <div class="page-tag">✦ Réalisations ✦</div>
-      <h1>Chaque événement,<br><em>une histoire unique</em></h1>
-      <p>Patinoires · Spectacles · Animations · Sur mesure</p>
+      <div class="page-tag" data-i18n="realisationsPage.hero.tag">✦ Réalisations ✦</div>
+      <h1 data-i18n-html="realisationsPage.hero.titre">Chaque événement,<br><em>une histoire unique</em></h1>
+      <p data-i18n="realisationsPage.hero.sousTitre">Patinoires · Spectacles · Animations · Sur mesure</p>
     </div>
   </div>
 
   <div class="gallery-section">
     <div class="gallery-header">
-      <span class="sec-tag">Nos installations</span>
-      <h2>Patinoires <em>éphémères</em></h2>
+      <span class="sec-tag" data-i18n="realisationsPage.gallery.tag">Nos installations</span>
+      <h2 data-i18n-html="realisationsPage.gallery.titre">Patinoires <em>éphémères</em></h2>
     </div>
     <div class="filters">
-      <button class="filter-btn">Place de ville</button>
-      <button class="filter-btn">Hôtel & Resort</button>
-      <button class="filter-btn">Centre commercial</button>
-      <button class="filter-btn">Spectacle</button>
+      <button class="filter-btn" data-i18n="realisationsPage.filters.ville">Place de ville</button>
+      <button class="filter-btn" data-i18n="realisationsPage.filters.hotel">Hôtel & Resort</button>
+      <button class="filter-btn" data-i18n="realisationsPage.filters.centre">Centre commercial</button>
+      <button class="filter-btn" data-i18n="realisationsPage.filters.spectacle">Spectacle</button>
     </div>
     <div class="gallery-grid" id="gallery">
-      <div class="gallery-item" onclick="openLightbox(0)"><img src="hero-bg.jpg" alt="Patinoire féerique" /><div class="item-overlay"><span class="item-label">Place de ville · Ambiance Noël</span></div></div>
-      <div class="gallery-item" onclick="openLightbox(1)"><img src="cibles-bg.jpg" alt="Patinoire lumières" /><div class="item-overlay"><span class="item-label">Vue aérienne · Sapin central</span></div></div>
-      <div class="gallery-item" onclick="openLightbox(2)"><img src="cta-bg.jpg" alt="Lumières de Noël" /><div class="item-overlay"><span class="item-label">Éclairage premium · Noël</span></div></div>
-      <div class="gallery-item" onclick="openLightbox(3)"><img src="real-07.png" alt="Rooftop Paris" /><div class="item-overlay"><span class="item-label">Centre commercial · Rooftop Paris</span></div></div>
-      <div class="gallery-item" onclick="openLightbox(4)"><img src="real-01.png" alt="Vue aérienne jour" /><div class="item-overlay"><span class="item-label">Place de ville · Vue aérienne</span></div></div>
-      <div class="gallery-item" onclick="openLightbox(5)"><img src="real-02.png" alt="Vue aérienne nuit" /><div class="item-overlay"><span class="item-label">Grande installation · Nuit</span></div></div>
-      <div class="gallery-item" onclick="openLightbox(6)"><img src="real-03.png" alt="Patinoire violet" /><div class="item-overlay"><span class="item-label">Éclairage prestige · Violet</span></div></div>
-      <div class="gallery-item" onclick="openLightbox(7)"><img src="real-05.png" alt="Resort montagne" /><div class="item-overlay"><span class="item-label">Resort · Montagne</span></div></div>
-      <div class="gallery-item" onclick="openLightbox(8)"><img src="real-06.png" alt="Sculpture de glace" /><div class="item-overlay"><span class="item-label">Événement · Sculpture de glace</span></div></div>
-      <div class="gallery-item" onclick="openLightbox(9)"><img src="real-07.png" alt="Rooftop Paris" /><div class="item-overlay"><span class="item-label">Rooftop · Printemps Haussmann Paris</span></div></div>
-      <div class="gallery-item" onclick="openLightbox(10)"><img src="real-08.png" alt="Marché de Noël" /><div class="item-overlay"><span class="item-label">Marché de Noël · Vue aérienne</span></div></div>
-      <div class="gallery-item" onclick="openLightbox(10)"><img src="real-09.png" alt="Grand Palais" /><div class="item-overlay"><span class="item-label">Grand Palais · Paris</span></div></div>
-      <div class="gallery-item" onclick="openLightbox(11)"><img src="real-10.png" alt="Grand Palais nuit" /><div class="item-overlay"><span class="item-label">Grand Palais · Spectacle nocturne</span></div></div>
+      <div class="gallery-item" onclick="openLightbox(0)"><img src="hero-bg.jpg" alt="Patinoire féerique" /><div class="item-overlay"><span class="item-label" data-i18n="realisationsPage.items.i0">Place de ville · Ambiance Noël</span></div></div>
+      <div class="gallery-item" onclick="openLightbox(1)"><img src="cibles-bg.jpg" alt="Patinoire lumières" /><div class="item-overlay"><span class="item-label" data-i18n="realisationsPage.items.i1">Vue aérienne · Sapin central</span></div></div>
+      <div class="gallery-item" onclick="openLightbox(2)"><img src="cta-bg.jpg" alt="Lumières de Noël" /><div class="item-overlay"><span class="item-label" data-i18n="realisationsPage.items.i2">Éclairage premium · Noël</span></div></div>
+      <div class="gallery-item" onclick="openLightbox(3)"><img src="real-07.png" alt="Rooftop Paris" /><div class="item-overlay"><span class="item-label" data-i18n="realisationsPage.items.i3">Centre commercial · Rooftop Paris</span></div></div>
+      <div class="gallery-item" onclick="openLightbox(4)"><img src="real-01.png" alt="Vue aérienne jour" /><div class="item-overlay"><span class="item-label" data-i18n="realisationsPage.items.i4">Place de ville · Vue aérienne</span></div></div>
+      <div class="gallery-item" onclick="openLightbox(5)"><img src="real-02.png" alt="Vue aérienne nuit" /><div class="item-overlay"><span class="item-label" data-i18n="realisationsPage.items.i5">Grande installation · Nuit</span></div></div>
+      <div class="gallery-item" onclick="openLightbox(6)"><img src="real-03.png" alt="Patinoire violet" /><div class="item-overlay"><span class="item-label" data-i18n="realisationsPage.items.i6">Éclairage prestige · Violet</span></div></div>
+      <div class="gallery-item" onclick="openLightbox(7)"><img src="real-05.png" alt="Resort montagne" /><div class="item-overlay"><span class="item-label" data-i18n="realisationsPage.items.i7">Resort · Montagne</span></div></div>
+      <div class="gallery-item" onclick="openLightbox(8)"><img src="real-06.png" alt="Sculpture de glace" /><div class="item-overlay"><span class="item-label" data-i18n="realisationsPage.items.i8">Événement · Sculpture de glace</span></div></div>
+      <div class="gallery-item" onclick="openLightbox(9)"><img src="real-07.png" alt="Rooftop Paris" /><div class="item-overlay"><span class="item-label" data-i18n="realisationsPage.items.i9">Rooftop · Printemps Haussmann Paris</span></div></div>
+      <div class="gallery-item" onclick="openLightbox(10)"><img src="real-08.png" alt="Marché de Noël" /><div class="item-overlay"><span class="item-label" data-i18n="realisationsPage.items.i10">Marché de Noël · Vue aérienne</span></div></div>
+      <div class="gallery-item" onclick="openLightbox(10)"><img src="real-09.png" alt="Grand Palais" /><div class="item-overlay"><span class="item-label" data-i18n="realisationsPage.items.i11">Grand Palais · Paris</span></div></div>
+      <div class="gallery-item" onclick="openLightbox(11)"><img src="real-10.png" alt="Grand Palais nuit" /><div class="item-overlay"><span class="item-label" data-i18n="realisationsPage.items.i12">Grand Palais · Spectacle nocturne</span></div></div>
     </div>
   </div>
 
   <div class="spectacle-section">
     <div class="gallery-header">
-      <span class="sec-tag">Crystalia Show</span>
-      <h2>Spectacles de <em>patinage artistique</em></h2>
+      <span class="sec-tag" data-i18n="realisationsPage.spectacle.tag">Crystalia Show</span>
+      <h2 data-i18n-html="realisationsPage.spectacle.titre">Spectacles de <em>patinage artistique</em></h2>
     </div>
     <div class="spectacle-grid">
-      <div class="spectacle-item"><img src="phrase-bg.jpg" alt="Patineuse lune bleue" /><div class="ov-label">Spectacle en couple</div></div>
-      <div class="spectacle-item"><img src="show-left.jpg" alt="Duo patinage" /><div class="ov-label">Solo · Univers féerique</div></div>
-      <div class="spectacle-item"><img src="show-01.png" alt="Patineuse fée" /><div class="ov-label">Spectacle enchanté</div></div>
+      <div class="spectacle-item"><img src="phrase-bg.jpg" alt="Patineuse lune bleue" /><div class="ov-label" data-i18n="realisationsPage.spectacle.s0">Spectacle en couple</div></div>
+      <div class="spectacle-item"><img src="show-left.jpg" alt="Duo patinage" /><div class="ov-label" data-i18n="realisationsPage.spectacle.s1">Solo · Univers féerique</div></div>
+      <div class="spectacle-item"><img src="show-01.png" alt="Patineuse fée" /><div class="ov-label" data-i18n="realisationsPage.spectacle.s2">Spectacle enchanté</div></div>
     </div>
   </div>
 
@@ -129,19 +129,19 @@
     <img src="hero-bg.jpg" alt="Patinoire" />
     <div class="cta-ov"></div>
     <div class="cta-inner">
-      <h2>Votre événement sera<br><em>notre prochaine réalisation</em></h2>
-      <p>Parlons de votre projet · Devis gratuit</p>
-      <a href="contact.html" class="btn-white">Nous contacter</a>
+      <h2 data-i18n-html="realisationsPage.cta.titre">Votre événement sera<br><em>notre prochaine réalisation</em></h2>
+      <p data-i18n="realisationsPage.cta.sousTitre">Parlons de votre projet · Devis gratuit</p>
+      <a href="contact.html" class="btn-white" data-i18n="realisationsPage.cta.bouton">Nous contacter</a>
     </div>
   </section>
 
   <footer>
     <div class="footer-logo">Crystalia</div>
     <nav class="footer-nav">
-      <a href="concept.html">Concept</a>
-      <a href="formules.html">Formules</a>
-      <a href="realisations.html">Réalisations</a>
-      <a href="contact.html">Contact</a>
+      <a href="concept.html" data-i18n="nav.concept">Concept</a>
+      <a href="formules.html" data-i18n="nav.formules">Formules</a>
+      <a href="realisations.html" data-i18n="nav.realisations">Réalisations</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
     </nav>
     <div class="footer-social">
       <a href="#" target="_blank">Instagram</a>
@@ -160,6 +160,7 @@
     <div class="lightbox-caption" id="lb-caption"></div>
   </div>
 
+  <script src="i18n.js"></script>
   <script>
     window.addEventListener('scroll', () => {
       const nav = document.querySelector('nav');

@@ -83,13 +83,13 @@
       <span class="nav-logo-sub">Ice Events</span>
     </a>
     <ul class="nav-links">
-      <li><a href="concept.html">Concept</a></li>
-      <li><a href="formules.html">Formules</a></li>
-      <li><a href="realisations.html">Réalisations</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="concept.html" data-i18n="nav.concept">Concept</a></li>
+      <li><a href="formules.html" data-i18n="nav.formules">Formules</a></li>
+      <li><a href="realisations.html" data-i18n="nav.realisations">Réalisations</a></li>
+      <li><a href="contact.html" class="active" data-i18n="nav.contact">Contact</a></li>
     </ul>
     <div class="nav-lang">
-      <span class="active">FR</span><span>EN</span><span>ES</span>
+      <span data-lang="fr">FR</span><span data-lang="en">EN</span><span data-lang="es">ES</span>
     </div>
   </nav>
 
@@ -97,37 +97,37 @@
     <img src="cta-bg.jpg" alt="Lumières de Noël" />
     <div class="page-hero-ov"></div>
     <div class="page-hero-content">
-      <div class="page-tag">✦ Contact ✦</div>
-      <h1>Parlons de votre<br><em>projet</em></h1>
-      <p>Réponse sous 48h · Devis gratuit et sans engagement</p>
+      <div class="page-tag" data-i18n="contactPage.hero.tag">✦ Contact ✦</div>
+      <h1 data-i18n-html="contactPage.hero.titre">Parlons de votre<br><em>projet</em></h1>
+      <p data-i18n="contactPage.hero.sousTitre">Réponse sous 48h · Devis gratuit et sans engagement</p>
     </div>
   </div>
 
   <div class="contact-main">
     <div class="contact-info">
-      <span class="sec-tag">Nous contacter</span>
-      <h2>Un projet ?<br><em>Écrivez-nous.</em></h2>
-      <p>Que vous soyez une mairie, un hôtel ou un centre commercial, nous étudions chaque projet avec attention et vous proposons une offre entièrement sur mesure.</p>
+      <span class="sec-tag" data-i18n="contactPage.info.tag">Nous contacter</span>
+      <h2 data-i18n-html="contactPage.info.titre">Un projet ?<br><em>Écrivez-nous.</em></h2>
+      <p data-i18n="contactPage.info.texte">Que vous soyez une mairie, un hôtel ou un centre commercial, nous étudions chaque projet avec attention et vous proposons une offre entièrement sur mesure.</p>
       <div class="info-items">
         <div class="info-item">
           <span class="info-icon">✉</span>
           <div>
-            <span class="info-label">Email</span>
+            <span class="info-label" data-i18n="contactPage.info.email">Email</span>
             <span class="info-value">contact@crystalia-ice.com</span>
           </div>
         </div>
         <div class="info-item">
           <span class="info-icon">◎</span>
           <div>
-            <span class="info-label">Instagram</span>
+            <span class="info-label" data-i18n="contactPage.info.instagram">Instagram</span>
             <span class="info-value">@crystalia.iceevents</span>
           </div>
         </div>
         <div class="info-item">
           <span class="info-icon">◉</span>
           <div>
-            <span class="info-label">Zone d'intervention</span>
-            <span class="info-value">Espagne · France · Europe · International</span>
+            <span class="info-label" data-i18n="contactPage.info.zone">Zone d'intervention</span>
+            <span class="info-value" data-i18n="contactPage.info.zoneValeur">Espagne · France · Europe · International</span>
           </div>
         </div>
       </div>
@@ -138,88 +138,88 @@
       <div class="response-badge">
         <span style="font-size:20px;color:rgba(201,168,76,0.55)">◷</span>
         <div>
-          <strong>Réponse sous 48h</strong>
-          <span>Devis gratuit et sans engagement</span>
+          <strong data-i18n="contactPage.info.reponseTitre">Réponse sous 48h</strong>
+          <span data-i18n="contactPage.info.reponseTexte">Devis gratuit et sans engagement</span>
         </div>
       </div>
     </div>
 
     <div class="contact-form">
-      <span class="sec-tag">Votre demande</span>
-      <h2>Demandez votre<br><em>devis gratuit</em></h2>
-      <p>Tous les champs sont obligatoires</p>
+      <span class="sec-tag" data-i18n="contactPage.form.tag">Votre demande</span>
+      <h2 data-i18n-html="contactPage.form.titre">Demandez votre<br><em>devis gratuit</em></h2>
+      <p data-i18n="contactPage.form.sousTitre">Tous les champs sont obligatoires</p>
 
       <form id="contact-form" action="https://formspree.io/f/VOTRE_ID" method="POST">
         <div class="form-row">
           <div class="form-group">
-            <label for="nom">Prénom & Nom</label>
+            <label for="nom" data-i18n="contactPage.form.nom">Prénom & Nom</label>
             <input type="text" id="nom" name="nom" placeholder="Jean Dupont" required />
           </div>
           <div class="form-group">
-            <label for="org">Organisation</label>
+            <label for="org" data-i18n="contactPage.form.org">Organisation</label>
             <input type="text" id="org" name="organisation" placeholder="Mairie de..." required />
           </div>
         </div>
         <div class="form-row">
           <div class="form-group">
-            <label for="email">Email</label>
+            <label for="email" data-i18n="contactPage.form.email">Email</label>
             <input type="email" id="email" name="email" placeholder="contact@example.com" required />
           </div>
           <div class="form-group">
-            <label for="tel">Téléphone</label>
+            <label for="tel" data-i18n="contactPage.form.tel">Téléphone</label>
             <input type="tel" id="tel" name="telephone" placeholder="+33 6 00 00 00 00" />
           </div>
         </div>
         <div class="form-row">
           <div class="form-group">
-            <label for="type">Vous êtes</label>
+            <label for="type" data-i18n="contactPage.form.type">Vous êtes</label>
             <select id="type" name="type" required>
-              <option value="">Sélectionner...</option>
-              <option>Mairie / Collectivité</option>
-              <option>Hôtel / Resort</option>
-              <option>Centre commercial</option>
-              <option>Événement privé</option>
-              <option>Autre</option>
+              <option value="" data-i18n="contactPage.form.select">Sélectionner...</option>
+              <option data-i18n="contactPage.form.typeMairie">Mairie / Collectivité</option>
+              <option data-i18n="contactPage.form.typeHotel">Hôtel / Resort</option>
+              <option data-i18n="contactPage.form.typeCentre">Centre commercial</option>
+              <option data-i18n="contactPage.form.typePrive">Événement privé</option>
+              <option data-i18n="contactPage.form.typeAutre">Autre</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="formule">Formule souhaitée</label>
+            <label for="formule" data-i18n="contactPage.form.formule">Formule souhaitée</label>
             <select id="formule" name="formule">
-              <option value="">Sélectionner...</option>
-              <option>Crystalia Essentiel</option>
-              <option>Crystalia Prestige</option>
-              <option>Crystalia Show</option>
-              <option>Crystalia Premium</option>
-              <option>Je ne sais pas encore</option>
+              <option value="" data-i18n="contactPage.form.select">Sélectionner...</option>
+              <option data-i18n="contactPage.form.fEssentiel">Crystalia Essentiel</option>
+              <option data-i18n="contactPage.form.fPrestige">Crystalia Prestige</option>
+              <option data-i18n="contactPage.form.fShow">Crystalia Show</option>
+              <option data-i18n="contactPage.form.fPremium">Crystalia Premium</option>
+              <option data-i18n="contactPage.form.fInconnu">Je ne sais pas encore</option>
             </select>
           </div>
         </div>
         <div class="form-group">
-          <label for="message">Votre projet</label>
+          <label for="message" data-i18n="contactPage.form.message">Votre projet</label>
           <textarea id="message" name="message" placeholder="Décrivez votre projet — lieu, période souhaitée, taille approximative, vos attentes..." required></textarea>
         </div>
-        <button type="submit" class="btn-submit">Envoyer ma demande</button>
-        <div class="form-note">Vos données sont traitées de manière confidentielle · Réponse sous 48h</div>
+        <button type="submit" class="btn-submit" data-i18n="contactPage.form.envoyer">Envoyer ma demande</button>
+        <div class="form-note" data-i18n="contactPage.form.note">Vos données sont traitées de manière confidentielle · Réponse sous 48h</div>
       </form>
 
       <div class="form-success" id="form-success">
-        <h3>Message envoyé ✦</h3>
-        <p>Merci pour votre demande. Nous reviendrons vers vous sous 48h.</p>
+        <h3 data-i18n="contactPage.form.successTitre">Message envoyé ✦</h3>
+        <p data-i18n="contactPage.form.successTexte">Merci pour votre demande. Nous reviendrons vers vous sous 48h.</p>
       </div>
     </div>
   </div>
 
   <div class="quote-fin">
-    <p>« Chaque grand événement commence par <em>une simple conversation.</em> »</p>
+    <p data-i18n-html="contactPage.quote">« Chaque grand événement commence par <em>une simple conversation.</em> »</p>
   </div>
 
   <footer>
     <div class="footer-logo">Crystalia</div>
     <nav class="footer-nav">
-      <a href="concept.html">Concept</a>
-      <a href="formules.html">Formules</a>
-      <a href="realisations.html">Réalisations</a>
-      <a href="contact.html">Contact</a>
+      <a href="concept.html" data-i18n="nav.concept">Concept</a>
+      <a href="formules.html" data-i18n="nav.formules">Formules</a>
+      <a href="realisations.html" data-i18n="nav.realisations">Réalisations</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
     </nav>
     <div class="footer-social">
       <a href="#" target="_blank">Instagram</a>
@@ -228,6 +228,7 @@
     </div>
   </footer>
 
+  <script src="i18n.js"></script>
   <script>
     window.addEventListener('scroll', () => {
       const nav = document.querySelector('nav');
