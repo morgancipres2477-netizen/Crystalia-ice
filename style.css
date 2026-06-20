@@ -137,15 +137,17 @@ footer { padding: 28px 48px; background: rgba(4,5,14,0.99); border-top: var(--bo
    RESPONSIVE — MOBILE (≤ 768px)
    ============================================ */
 @media (max-width: 768px) {
-  nav.main-nav { padding: 14px 20px; }
-  .nav-logo-main { font-size: 22px; letter-spacing: 4px; }
+  nav.main-nav { padding: 14px 16px; gap: 10px; }
+  .nav-logo-main { font-size: 20px; letter-spacing: 3px; }
   .nav-logo-sub { font-size: 7px; letter-spacing: 4px; }
 
-  /* hide desktop nav, show burger */
+  /* hide desktop nav links, keep lang switcher visible, show burger */
   .nav-links { display: none; }
-  .nav-lang { display: none; }
+  .nav-lang { display: flex; gap: 8px; margin-left: auto; margin-right: 14px; }
+  .nav-lang span { font-size: 11px; }
   .nav-burger { display: flex; }
   .nav-mobile-panel { display: flex; }
+  .nav-mobile-lang { display: none; }
 
   .page-hero { height: 240px; margin-top: 60px; }
   .page-hero-content { padding: 24px; }
