@@ -137,15 +137,16 @@ footer { padding: 28px 48px; background: rgba(4,5,14,0.99); border-top: var(--bo
    RESPONSIVE — MOBILE (≤ 768px)
    ============================================ */
 @media (max-width: 768px) {
-  nav.main-nav { padding: 14px 16px; gap: 10px; }
+  nav.main-nav { padding: 14px 16px; gap: 10px; justify-content: space-between; }
+  .nav-logo { order: 2; margin: 0 auto; text-align: center; }
   .nav-logo-main { font-size: 20px; letter-spacing: 3px; }
   .nav-logo-sub { font-size: 7px; letter-spacing: 4px; }
 
-  /* hide desktop nav links, keep lang switcher visible, show burger */
+  /* hide desktop nav links, show burger (left) + lang switcher (right) */
   .nav-links { display: none; }
-  .nav-lang { display: flex; gap: 8px; margin-left: auto; margin-right: 14px; }
+  .nav-burger { display: flex; order: 1; }
+  .nav-lang { display: flex; order: 3; gap: 8px; }
   .nav-lang span { font-size: 11px; }
-  .nav-burger { display: flex; }
   .nav-mobile-panel { display: flex; }
   .nav-mobile-lang { display: none; }
 
